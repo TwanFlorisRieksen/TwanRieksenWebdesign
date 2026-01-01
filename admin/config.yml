@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: TwanRieksen/TwanRieksenWebdesign
+  repo: TwanFlorisRieksen/TwanRieksenWebdesign
   branch: main
 
 media_folder: "assets/img/uploads"
