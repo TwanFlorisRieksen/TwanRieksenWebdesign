@@ -1,0 +1,49 @@
+{
+  "page": {
+    "title": "Werkwijze",
+    "subtitle": "Duidelijk proces, snelle oplevering."
+  },
+  "steps": [
+    {
+      "title": "1. Intake",
+      "text": "U geeft door wat u nodig heeft en welke stijl u wilt."
+    },
+    {
+      "title": "2. Offerte",
+      "text": "U ontvangt een duidelijke prijs op basis van het aantal pagina’s en eventuele extra opties."
+    },
+    {
+      "title": "3. Bouw & review",
+      "text": "Ik bouw de site en u geeft gericht feedback."
+    },
+    {
+      "title": "4. Oplevering & overdracht",
+      "text": "Na akkoord is alles netjes opgeleverd en overdraagbaar."
+    }
+  ],
+  "need": {
+    "title": "Wat ik van u nodig heb",
+    "items": [
+      "Logo (of ik maak een basislogo)",
+      "Contactgegevens (mail, telefoon, adres indien nodig)",
+      "Openingstijden (indien relevant)",
+      "Eventuele foto’s (anders placeholders)",
+      "Voorbeelden van websites die u mooi vindt"
+    ]
+  },
+  "rules": {
+    "title": "Afspraken",
+    "items": [
+      "Oplevering na akkoord op de inhoud.",
+      "Feedback graag gebundeld, zodat we snel door kunnen.",
+      "Als u extra wensen heeft die niet in de afspraak stonden, bespreken we die eerst en krijgt u vooraf een prijs."
+    ]
+  },
+  "note": "Vanaf €200. U ontvangt altijd eerst een offerte op basis van uw wensen.",
+  "cta": {
+    "title": "Klaar om te starten?",
+    "text": "",
+    "button_label": "Offerte aanvragen",
+    "button_href": "contact.html"
+  }
+}

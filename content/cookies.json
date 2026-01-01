@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Cookiebeleid",
+    "subtitle": "Korte uitleg over cookies."
+  },
+  "body": [
+    {
+      "type": "heading",
+      "text": "Wat zijn cookies?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cookies zijn kleine tekstbestanden die door uw browser worden opgeslagen."
+    },
+    {
+      "type": "heading",
+      "text": "Gebruik op deze website"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deze website gebruikt alleen functionele cookies, tenzij u zelf analytics toevoegt als add-on."
+    },
+    {
+      "type": "heading",
+      "text": "Beheer"
+    },
+    {
+      "type": "paragraph",
+      "text": "U kunt cookies verwijderen via de instellingen van uw browser."
+    }
+  ]
+}

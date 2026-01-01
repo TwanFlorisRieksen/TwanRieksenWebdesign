@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Privacy",
+    "subtitle": "Korte uitleg over gegevens."
+  },
+  "body": [
+    {
+      "type": "heading",
+      "text": "Welke gegevens worden verwerkt?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Via het contactformulier worden uw naam, e-mail en bericht verwerkt om uw aanvraag te beantwoorden."
+    },
+    {
+      "type": "heading",
+      "text": "Bewaartermijn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Berichten worden bewaard zolang dat nodig is voor opvolging en administratie."
+    },
+    {
+      "type": "heading",
+      "text": "Contact"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vragen over privacy? Mail naar contact@rieksenwebstudio.nl."
+    }
+  ]
+}
