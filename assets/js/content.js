@@ -392,6 +392,15 @@ function mountDiensten(page){
         rules.appendChild(li);
       });
     }
+        const platforms = $('[data-mount="werkwijze.platforms.items"]');
+    if(platforms){
+      platforms.innerHTML = '';
+      (page.platforms?.items||[]).forEach(t=>{
+        const li = document.createElement('li');
+        li.textContent = t;
+        platforms.appendChild(li);
+      });
+    }
   }
 
   function mountProjecten(page){
