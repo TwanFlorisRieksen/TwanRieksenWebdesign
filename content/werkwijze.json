@@ -41,7 +41,6 @@
     "button_href": "contact.html"
   },
   "steps_subtitle": "Ik bouw alles eerst in mijn eigen omgeving. Pas als u tevreden bent, zet ik de website, het beheer en de statistieken stap voor stap over naar u.",
-  "platforms_note": "Platformen die we gebruiken: hosting via Netlify, code/opslag via GitHub en bewerken via een simpel CMS. Voor e-mailbevestigingen gebruiken we een verzenddienst. Website-statistieken zijn optioneel.",
   "note": "U zit nergens aan vast tot u akkoord geeft op de oplevering.",
   "need": {
     "title": "Wat ik van u nodig heb",
