@@ -1,18 +1,9 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6L1GF4THQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E6L1GF4THQ');
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cookiebeleid | Twan Rieksen Webdesign</title>
+  <title>Cookieverklaring | Twan Rieksen Webdesign</title>
   <meta name="description" content="" data-bind="site.seo.site_description" />
   <meta name="theme-color" content="#1d4ed8" data-bind="site.seo.theme_color" />
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -26,17 +17,9 @@
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">
-  <img
-    class="brand-logo"
-    alt="Twan Rieksen Webdesign"
-    width="40"
-    height="40"
-    loading="eager"
-    decoding="async"
-    hidden
-  />
-  <span class="rw rw-fallback" aria-hidden="true">RW</span>
-</span>
+          <img class="brand-logo" alt="Twan Rieksen Webdesign" width="40" height="40" loading="eager" decoding="async" hidden />
+          <span class="rw rw-fallback" aria-hidden="true">RW</span>
+        </span>
         <span class="brand-text">
           <span class="brand-name" data-bind="site.brand.name">Twan Rieksen Webdesign</span>
           <span class="brand-tagline" data-bind="site.brand.tagline">Kant-en-klare websites voor kleine bedrijven.</span>
@@ -73,20 +56,26 @@
   </div>
 
   <main id="main" class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-bind="cookies.page.title"></h1>
+        <p class="lead" data-bind="cookies.page.subtitle"></p>
+      </div>
+    </section>
 
-<section class="page-hero">
-  <div class="container">
-    <h1 data-bind="cookies.page.title"></h1>
-    <p class="lead" data-bind="cookies.page.subtitle"></p>
-  </div>
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="card reveal">
+          <p class="muted" data-bind="cookies.intro"></p>
+        </div>
 
-<section class="section">
-  <div class="container">
-    <article class="legal" data-mount="legal.body"></article>
-  </div>
-</section>
+        <div class="stack" data-mount="cookies.sections">
+          <!-- sections rendered by JS -->
+        </div>
 
+        <div class="note-bar small reveal" data-bind="cookies.last_updated"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" data-mount="site.footer">
@@ -106,7 +95,5 @@
   <script src="assets/js/content.js"></script>
   <script src="assets/js/network-bg.js"></script>
   <script src="assets/js/site.js" defer></script>
-
-  <canvas id="network-bg" aria-hidden="true"></canvas>
 </body>
 </html>
