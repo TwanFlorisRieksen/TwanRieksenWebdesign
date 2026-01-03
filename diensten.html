@@ -90,31 +90,35 @@
 
     <div class="grid two">
       <div class="card reveal">
-        <h3>Wat u krijgt</h3>
-        <ul class="bullets" data-mount="diensten.deliverables"></ul>
-        <div class="card reveal">
+  <h3>Wat u krijgt</h3>
+
+  <!-- bullets (maar 1x!) -->
   <ul class="bullets" data-mount="diensten.deliverables"></ul>
 
-<!-- CTA naar werkwijze (strak, geen note-bar) -->
-<div class="card reveal" style="margin-top:14px; padding:14px">
-  <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
-    <div style="min-width:220px; flex:1">
-      <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">
-        Benieuwd hoe ik te werk ga?
-      </div>
-      <p class="muted" style="margin:6px 0 0" data-bind="diensten.cta_werkwijze.text">
-        Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
-  <span class="badge">Preview-link</span>
-  <span class="badge">Ownership transfer</span>
-  <span class="badge">Geen technisch gedoe</span>
-</div>
-      </p>
-    </div>
+  <!-- CTA naar werkwijze (strak, geen note-bar, geen stippels) -->
+  <div class="card reveal" style="margin-top:14px; padding:14px">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <div style="min-width:220px; flex:1">
+        <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">
+          Benieuwd hoe ik te werk ga?
+        </div>
 
-    <a class="btn ghost" href="werkwijze.html" data-bind="diensten.cta_werkwijze.button_label">
-      werkwijze
-    </a>
+        <p class="muted" style="margin:6px 0 0" data-bind="diensten.cta_werkwijze.text">
+          Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.
+        </p>
+
+        <!-- badges (LET OP: niet in <p> stoppen) -->
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+          <span class="badge">Preview-link</span>
+          <span class="badge">Ownership transfer</span>
+          <span class="badge">Geen technisch gedoe</span>
+        </div>
+      </div>
+
+      <a class="btn ghost" href="werkwijze.html" data-bind="diensten.cta_werkwijze.button_label">
+        Kijk hoe ik te werk ga
+      </a>
+    </div>
   </div>
 </div>
 
