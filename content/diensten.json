@@ -14,6 +14,12 @@
     "U kunt zelf teksten en foto’s aanpassen via een simpel beheerpaneel",
     "Duidelijke oplevering + korte uitleg zodat u ermee kunt werken"
   ],
+  "cta_werkwijze": {
+  "title": "Benieuwd hoe ik te werk ga?",
+  "text": "Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.",
+  "button_label": "Kijk hoe ik te werk ga",
+  "button_href": "werkwijze.html"
+},
   "addons": {
     "title": "Extra opties (vaste prijzen)",
     "note": "Dit zijn populaire extra opties. Mist u iets of heeft u zelf een idee? Laat het weten—bijna alles is mogelijk en ik denk graag mee.",
