@@ -15,11 +15,11 @@
     "Duidelijke oplevering + korte uitleg zodat u ermee kunt werken"
   ],
   "cta_werkwijze": {
-  "title": "Benieuwd hoe ik te werk ga?",
-  "text": "Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.",
-  "button_label": "Kijk hoe ik te werk ga",
-  "button_href": "werkwijze.html"
-},
+    "title": "Benieuwd hoe ik te werk ga?",
+    "text": "Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.",
+    "button_label": "Kijk hoe ik te werk ga",
+    "button_href": "werkwijze.html"
+  },
   "addons": {
     "title": "Extra opties",
     "note": "Dit zijn populaire extra opties. Mist u iets of heeft u zelf een idee? Laat het weten—bijna alles is mogelijk en ik denk graag mee.",
@@ -59,8 +59,8 @@
   },
   "faq": [
     {
-      "q": "Kan ik later uitbreiden?",
-      "a": "Ja. U kunt later extra pagina’s of extra opties toevoegen. U ontvangt vooraf een vaste prijs."
+      "q": "Heeft u na oplevering nog toegang tot mijn website?",
+      "a": "Nee. Na oplevering staat alles volledig op uw naam en heb ik geen toegang meer.\nAlleen als u later zelf om hulp vraagt, kan ik tijdelijk meekijken.\n"
     },
     {
       "q": "Kan ik zelf teksten en afbeeldingen wijzigen?",
