@@ -866,3 +866,20 @@ p + p{ margin-top: 10px; }
     scroll-behavior: auto !important;
   }
 }
+/* Diensten: maak de add-ons lijst scrollbaar zodat kolommen gelijker ogen */
+.addons-card .addon-list{
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+/* Nettere scrollbar (werkt in moderne browsers) */
+.addons-card .addon-list::-webkit-scrollbar{
+  width: 10px;
+}
+.addons-card .addon-list::-webkit-scrollbar-thumb{
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  background-color: rgba(0,0,0,0.18);
+}
