@@ -1,15 +1,6 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6L1GF4THQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E6L1GF4THQ');
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Werkwijze | Twan Rieksen Webdesign</title>
@@ -26,17 +17,17 @@
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">
-  <img
-    class="brand-logo"
-    alt="Twan Rieksen Webdesign"
-    width="40"
-    height="40"
-    loading="eager"
-    decoding="async"
-    hidden
-  />
-  <span class="rw rw-fallback" aria-hidden="true">RW</span>
-</span>
+          <img
+            class="brand-logo"
+            alt="Twan Rieksen Webdesign"
+            width="40"
+            height="40"
+            loading="eager"
+            decoding="async"
+            hidden
+          />
+          <span class="rw rw-fallback" aria-hidden="true">RW</span>
+        </span>
         <span class="brand-text">
           <span class="brand-name" data-bind="site.brand.name">Twan Rieksen Webdesign</span>
           <span class="brand-tagline" data-bind="site.brand.tagline">Kant-en-klare websites voor kleine bedrijven.</span>
@@ -74,41 +65,48 @@
 
   <main id="main" class="site-main">
 
-<section class="page-hero">
-  <div class="container">
-    <h1 data-bind="werkwijze.page.title"></h1>
-    <p class="lead" data-bind="werkwijze.page.subtitle"></p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="card reveal">
-      <div class="steps" data-mount="werkwijze.steps"></div>
-    </div>
-
-    <div class="grid two">
-      <div class="card reveal">
-        <h3 data-bind="werkwijze.need.title"></h3>
-        <ul class="bullets" data-mount="werkwijze.need.items"></ul>
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-bind="werkwijze.page.title"></h1>
+        <p class="lead" data-bind="werkwijze.page.subtitle"></p>
       </div>
-      <div class="card reveal">
-        <h3 data-bind="werkwijze.rules.title"></h3>
-        <ul class="bullets" data-mount="werkwijze.rules.items"></ul>
-      </div>
-    </div>
-
-    <div class="note-bar reveal" data-bind="werkwijze.note"></div>
-
-    <section class="cta-band reveal">
-      <div class="cta-inner">
-        <h3 data-bind="werkwijze.cta.title"></h3>
-        <p class="muted" data-bind="werkwijze.cta.text"></p>
-      </div>
-      <a class="btn primary" data-bind="werkwijze.cta.button_label" href="contact.html">Offerte aanvragen</a>
     </section>
-  </div>
-</section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="grid two">
+          <div class="card large reveal">
+            <h2 data-bind="werkwijze.steps_title">Zo werkt het (simpel en duidelijk)</h2>
+            <p class="muted" data-bind="werkwijze.steps_subtitle"></p>
+            <div class="steps" data-mount="werkwijze.steps"></div>
+            <div class="note-bar small" style="margin-top:12px" data-bind="werkwijze.platforms_note"></div>
+          </div>
+
+          <div class="stack">
+            <div class="card reveal">
+              <h3 data-bind="werkwijze.need.title"></h3>
+              <ul class="bullets" data-mount="werkwijze.need.items"></ul>
+            </div>
+            <div class="card reveal">
+              <h3 data-bind="werkwijze.rules.title"></h3>
+              <ul class="bullets" data-mount="werkwijze.rules.items"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-bar reveal" data-bind="werkwijze.note"></div>
+
+        <section class="cta-band reveal">
+          <div class="cta-inner">
+            <h3 data-bind="werkwijze.cta.title"></h3>
+            <p class="muted" data-bind="werkwijze.cta.text"></p>
+          </div>
+          <a class="btn primary" data-bind="werkwijze.cta.button_label" href="contact.html">Naar contact</a>
+        </section>
+
+      </div>
+    </section>
 
   </main>
 
