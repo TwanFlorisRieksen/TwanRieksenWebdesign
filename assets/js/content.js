@@ -457,33 +457,80 @@ function mountDiensten(page){
     }
   }
 
-  function mountLegal(page){
-    const host = $('.legal[data-mount="legal.body"]');
-    if(!host) return;
-    host.innerHTML = '';
-    (page.body||[]).forEach(b=>{
-      if(b.type === 'heading'){
-        const h = document.createElement('h2');
-        h.textContent = b.text || '';
-        host.appendChild(h);
+function mountLegal(page){
+  // 1) NIEUW: sections renderer (privacy.sections / cookies.sections)
+  const sectionsHost =
+    document.querySelector('[data-mount="privacy.sections"]') ||
+    document.querySelector('[data-mount="cookies.sections"]');
+
+  if(sectionsHost){
+    sectionsHost.innerHTML = '';
+
+    (page.sections || []).forEach(sec => {
+      const card = document.createElement('div');
+      card.className = 'card reveal';
+
+      // Titel
+      if(sec.title){
+        const h = document.createElement('h3');
+        h.textContent = sec.title;
+        card.appendChild(h);
       }
-      if(b.type === 'paragraph'){
+
+      // Tekst
+      if(sec.text){
         const p = document.createElement('p');
-        p.textContent = b.text || '';
-        host.appendChild(p);
+        p.className = 'muted';
+        p.textContent = sec.text;
+        card.appendChild(p);
       }
-      if(b.type === 'list'){
+
+      // Bullets
+      if(Array.isArray(sec.bullets) && sec.bullets.length){
         const ul = document.createElement('ul');
         ul.className = 'bullets';
-        (b.items||[]).forEach(it=>{
+        sec.bullets.forEach(b => {
           const li = document.createElement('li');
-          li.textContent = it;
+          li.textContent = b;
           ul.appendChild(li);
         });
-        host.appendChild(ul);
+        card.appendChild(ul);
       }
+
+      sectionsHost.appendChild(card);
     });
+
+    return; // klaar, niet doorgaan naar oude renderer
   }
+
+  // 2) OUDE fallback: legal.body renderer (als je ooit weer teruggaat naar dat systeem)
+  const host = $('.legal[data-mount="legal.body"]');
+  if(!host) return;
+
+  host.innerHTML = '';
+  (page.body||[]).forEach(b=>{
+    if(b.type === 'heading'){
+      const h = document.createElement('h2');
+      h.textContent = b.text || '';
+      host.appendChild(h);
+    }
+    if(b.type === 'paragraph'){
+      const p = document.createElement('p');
+      p.textContent = b.text || '';
+      host.appendChild(p);
+    }
+    if(b.type === 'list'){
+      const ul = document.createElement('ul');
+      ul.className = 'bullets';
+      (b.items||[]).forEach(it=>{
+        const li = document.createElement('li');
+        li.textContent = it;
+        ul.appendChild(li);
+      });
+      host.appendChild(ul);
+    }
+  });
+}
 
   async function buildSearchIndex(site, pages){
     // Create a basic search index across known pages and project titles/descriptions
