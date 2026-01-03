@@ -1,36 +1,48 @@
 {
-  "page": {
-    "title": "Werkwijze",
-    "subtitle": "U hoeft niets technisch te doen. Ik regel de bouw en zet alles daarna volledig op uw naam."
-  },
   "steps_title": "Zo werkt het (simpel en duidelijk)",
-  "steps_subtitle": "Ik bouw alles eerst in mijn eigen omgeving. Pas als u tevreden bent, zet ik de website, het beheer en de statistieken stap voor stap over naar u.",
   "steps": [
     {
       "title": "1) Korte intake (15 minuten)",
       "text": "We bespreken wat u verkoopt, welke pagina’s u nodig heeft en wat ‘goed’ voor u betekent. U hoeft geen technische termen te kennen."
     },
     {
-      "title": "2) Ik bouw de website volledig voor u",
+      "title": "2) Korte vragenlijst (vooraf)",
+      "text": "Voor de start ontvangt u van mij een korte vragenlijst. Deze is niet technisch en gaat alleen over uw bedrijf en uw voorkeuren. Denk aan wat u aanbiedt, wie uw klanten zijn en welke stijl u mooi vindt.\nOp basis hiervan kan ik de website direct goed en passend opzetten, zonder dat u alles uitgebreid hoeft uit te leggen."
+    },
+    {
+      "title": "3) Ik bouw de website volledig voor u",
       "text": "Ik maak de basis aan, zet het beheer klaar en bouw de pagina’s in uw stijl. U krijgt tussendoor een link om te bekijken en feedback te geven."
     },
     {
-      "title": "3) Feedbackronde(s) en finetunen",
+      "title": "4) Feedbackronde(s) en finetunen",
       "text": "U zegt wat u anders wilt (tekst, volgorde, kleuren, foto’s). Ik pas het aan tot het klopt. Geen gedoe met bestanden of instellingen aan uw kant."
     },
     {
-      "title": "4) Formulier, e-mail en (optioneel) statistieken testen",
+      "title": "5) Formulier, e-mail en (optioneel) statistieken testen",
       "text": "We testen samen of het contactformulier goed binnenkomt en of u een bevestiging kunt sturen naar klanten. Als u website-statistieken wilt, zet ik dat netjes aan en controleer ik of alles werkt."
     },
     {
-      "title": "5) Overzetten naar uw naam (ownership transfer)",
+      "title": "6) Overzetten naar uw naam (ownership transfer)",
       "text": "Als alles akkoord is, zet ik het project volledig op uw naam. U ontvangt per platform een e-mail met een uitnodiging. U klikt op ‘Accepteren’—meer hoeft u niet te doen."
     },
     {
-      "title": "6) Oplevering + korte uitleg",
+      "title": "7) Oplevering + korte uitleg",
       "text": "U krijgt een korte uitleg hoe u teksten en foto’s kunt aanpassen. Daarna heb ik geen toegang meer, tenzij u later expliciet om hulp vraagt."
     }
   ],
+  "page": {
+    "title": "Werkwijze",
+    "subtitle": "U hoeft niets technisch te doen. Ik regel de bouw en zet alles daarna volledig op uw naam."
+  },
+  "cta": {
+    "title": "Wilt u dit ook zo geregeld hebben?",
+    "text": "Stuur kort uw wensen. Dan maak ik een duidelijke offerte zonder technisch gedoe.",
+    "button_label": "Naar contact",
+    "button_href": "contact.html"
+  },
+  "steps_subtitle": "Ik bouw alles eerst in mijn eigen omgeving. Pas als u tevreden bent, zet ik de website, het beheer en de statistieken stap voor stap over naar u.",
+  "platforms_note": "Platformen die we gebruiken: hosting via Netlify, code/opslag via GitHub en bewerken via een simpel CMS. Voor e-mailbevestigingen gebruiken we een verzenddienst. Website-statistieken zijn optioneel.",
+  "note": "U zit nergens aan vast tot u akkoord geeft op de oplevering.",
   "need": {
     "title": "Wat ik van u nodig heb",
     "items": [
@@ -48,13 +60,5 @@
       "Na overdracht bent u 100% eigenaar: hosting, beheer en toegang staan op uw naam.",
       "Ik bewaar geen inloggegevens van u. U bepaalt zelf wie toegang heeft."
     ]
-  },
-  "platforms_note": "Platformen die we gebruiken: hosting via Netlify, code/opslag via GitHub en bewerken via een simpel CMS. Voor e-mailbevestigingen gebruiken we een verzenddienst. Website-statistieken zijn optioneel.",
-  "note": "U zit nergens aan vast tot u akkoord geeft op de oplevering.",
-  "cta": {
-    "title": "Wilt u dit ook zo geregeld hebben?",
-    "text": "Stuur kort uw wensen. Dan maak ik een duidelijke offerte zonder technisch gedoe.",
-    "button_label": "Naar contact",
-    "button_href": "contact.html"
   }
 }
