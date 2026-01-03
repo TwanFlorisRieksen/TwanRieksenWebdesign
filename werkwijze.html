@@ -89,7 +89,6 @@
             <h2 data-bind="werkwijze.steps_title">Zo werkt het (simpel en duidelijk)</h2>
             <p class="muted" data-bind="werkwijze.steps_subtitle"></p>
             <div class="steps" data-mount="werkwijze.steps"></div>
-            <div class="note-bar small" style="margin-top:12px" data-bind="werkwijze.platforms_note"></div>
           </div>
 
           <div class="stack">
@@ -103,7 +102,11 @@
             </div>
           </div>
         </div>
-
+<div class="card reveal">
+  <h3 data-bind="werkwijze.platforms.title"></h3>
+  <ul class="bullets" data-mount="werkwijze.platforms.items"></ul>
+</div>
+        
         <div class="note-bar reveal" data-bind="werkwijze.note"></div>
 
         <section class="cta-band reveal">
