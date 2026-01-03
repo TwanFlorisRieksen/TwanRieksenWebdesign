@@ -21,8 +21,9 @@
   "button_href": "werkwijze.html"
 },
   "addons": {
-    "title": "Extra opties (vaste prijzen)",
+    "title": "Extra opties",
     "note": "Dit zijn populaire extra opties. Mist u iets of heeft u zelf een idee? Laat het weten—bijna alles is mogelijk en ik denk graag mee.",
+    "scroll_hint": "Tip: scroll in dit vak voor alle extra opties.",
     "items": [
       {
         "name": "Extra pagina",
