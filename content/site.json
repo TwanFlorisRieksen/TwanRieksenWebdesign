@@ -1,0 +1,68 @@
+{
+  "brand": {
+    "name": "Twan Rieksen Webdesign",
+    "tagline": "Kant-en-klare websites voor kleine bedrijven.",
+    "city": "",
+    "logo": "/assets/img/uploads/twanlogo.png"
+  },
+  "seo": {
+    "site_description": "Strakke, snelle websites voor kleine bedrijven. Vanaf €200, met vaste add-ons.",
+    "theme_color": "#1d4ed8",
+    "og_image": "assets/img/placeholder/og.svg"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "https://twanrieksenwebdesign.netlify.app",
+      "key": "home"
+    },
+    {
+      "label": "Diensten",
+      "href": "https://twanrieksenwebdesign.netlify.app/diensten",
+      "key": "diensten"
+    },
+    {
+      "label": "Werkwijze",
+      "href": "https://twanrieksenwebdesign.netlify.app/werkwijze",
+      "key": "werkwijze"
+    },
+    {
+      "label": "Projecten",
+      "href": "https://twanrieksenwebdesign.netlify.app/projecten",
+      "key": "projecten"
+    },
+    {
+      "label": "Contact",
+      "href": "https://twanrieksenwebdesign.netlify.app/contact",
+      "key": "contact"
+    }
+  ],
+  "cta": {
+    "primary_label": "Offerte aanvragen",
+    "primary_href": "https://twanrieksenwebdesign.netlify.app/contact"
+  },
+  "contact": {
+    "email": "contact@rieksenwebstudio.nl",
+    "phone": "",
+    "socials": []
+  },
+  "footer": {
+    "note": "Strakke websites vanaf €200. Duidelijke afspraken, nette oplevering.",
+    "copyright": "© {year} Twan Rieksen Webdesign",
+    "legal_links": [
+      {
+        "label": "Privacy",
+        "href": "https://twanrieksenwebdesign.netlify.app/privacy"
+      },
+      {
+        "label": "Cookiebeleid",
+        "href": "https://twanrieksenwebdesign.netlify.app/cookies"
+      }
+    ]
+  },
+  "github_fallback": {
+    "owner": "TwanFlorisRieksen",
+    "repo": "TwanRieksenWebdesign",
+    "branch": "main"
+  }
+}

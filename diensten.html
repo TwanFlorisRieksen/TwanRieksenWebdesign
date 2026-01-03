@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6L1GF4THQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E6L1GF4THQ');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diensten | Twan Rieksen Webdesign</title>
+  <meta name="description" content="" data-bind="diensten.page.meta_description" />
+  <meta name="theme-color" content="#1d4ed8" data-bind="site.seo.theme_color" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body data-page="diensten" data-content="diensten">
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Naar inhoud</a>
+
+  <header class="site-header" data-mount="site.header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark">
+  <img
+    class="brand-logo"
+    alt="Twan Rieksen Webdesign"
+    width="40"
+    height="40"
+    loading="eager"
+    decoding="async"
+    hidden
+  /></span>
+        <span class="brand-text">
+          <span class="brand-name" data-bind="site.brand.name">Twan Rieksen Webdesign</span>
+          <span class="brand-tagline" data-bind="site.brand.tagline">Kant-en-klare websites voor kleine bedrijven.</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Hoofdnavigatie" data-mount="site.nav"></nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-open" type="button" aria-label="Zoeken" data-action="open-search">
+          <span class="icon" aria-hidden="true">⌕</span>
+        </button>
+        <a class="btn primary header-cta" data-bind="site.cta.primary_label" href="contact.html">Offerte aanvragen</a>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" data-action="toggle-menu">
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" hidden data-ui="search">
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label="Zoeken">
+      <div class="search-top">
+        <div class="search-title">Zoeken</div>
+        <button class="icon-btn" type="button" aria-label="Sluiten" data-action="close-search">✕</button>
+      </div>
+      <label class="search-field">
+        <span class="sr-only">Zoekterm</span>
+        <input type="search" placeholder="Zoek in pagina’s en projecten…" autocomplete="off" data-search="input" />
+      </label>
+      <div class="search-results" data-search="results"></div>
+      <div class="search-hint">Tip: druk op <kbd>/</kbd> om te zoeken en <kbd>Esc</kbd> om te sluiten.</div>
+    </div>
+  </div>
+
+  <main id="main" class="site-main">
+
+<section class="page-hero">
+  <div class="container">
+    <h1 data-bind="diensten.page.title"></h1>
+    <p class="lead" data-bind="diensten.page.subtitle"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card large reveal">
+      <h2 data-bind="diensten.offer.title"></h2>
+      <p class="lead" data-bind="diensten.offer.text"></p>
+    </div>
+
+    <div class="grid two">
+      <div class="card reveal">
+  <h3>Wat u krijgt</h3>
+
+  <!-- bullets (maar 1x!) -->
+  <ul class="bullets" data-mount="diensten.deliverables"></ul>
+
+  <!-- CTA naar werkwijze (strak, geen note-bar, geen stippels) -->
+  <div class="card reveal" style="margin-top:14px; padding:14px">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <div style="min-width:220px; flex:1">
+        <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">
+          Benieuwd hoe ik te werk ga?
+        </div>
+
+        <p class="muted" style="margin:6px 0 0" data-bind="diensten.cta_werkwijze.text">
+          Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.
+        </p>
+
+        <!-- badges (LET OP: niet in <p> stoppen) -->
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+          <span class="badge">Voorbeeldlink</span>
+          <span class="badge">Op uw naam</span>
+          <span class="badge">Geen technisch gedoe</span>
+        </div>
+      </div>
+
+      <a class="btn ghost" href="werkwijze.html" data-bind="diensten.cta_werkwijze.button_label">
+        werkwijze
+      </a>
+    </div>
+  </div>
+</div>
+
+      <div class="card reveal addons-card">
+        <h3 data-bind="diensten.addons.title"></h3>
+        <p class="muted" data-bind="diensten.addons.note"></p>
+        <p class="muted scroll-hint" data-bind="diensten.addons.scroll_hint">
+  Tip: scroll in dit vak voor alle extra opties.
+</p>
+        <div class="addon-list" data-mount="diensten.addons.items"></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+  <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
+  <p class="muted" data-bind="diensten.pricing.note"></p>
+  <div data-mount="diensten.pricing"></div>
+</div>
+
+    <div class="card reveal">
+      <h3>Veelgestelde vragen</h3>
+      <div class="faq" data-mount="diensten.faq"></div>
+    </div>
+
+    <section class="cta-band reveal">
+      <div class="cta-inner">
+        <h3 data-bind="diensten.cta.title"></h3>
+        <p class="muted" data-bind="diensten.cta.text"></p>
+      </div>
+      <a class="btn primary" data-bind="diensten.cta.button_label" href="contact.html">Naar contact</a>
+    </section>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer" data-mount="site.footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand" data-bind="site.brand.name">Twan Rieksen Webdesign</div>
+        <div class="footer-note" data-bind="site.footer.note"></div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links" data-mount="site.footer.links"></div>
+        <div class="footer-copy" data-bind="site.footer.copyright"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/network-bg.js"></script>
+  <script src="assets/js/site.js" defer></script>
+
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+</body>
+</html>
