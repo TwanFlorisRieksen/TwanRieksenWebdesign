@@ -1,0 +1,55 @@
+{
+  "page": {
+    "title": "Projecten",
+    "subtitle": "Voor zzp’ers en kleine bedrijven: strak, snel en duidelijk.",
+    "meta_description": "Bekijk recente projecten en zie wat er mogelijk is. Strakke, snelle websites zonder technisch gedoe—ik regel bouw, testen en livegang. Klaar voor een offerte? Neem contact op."
+  },
+  "intro": "Nieuwe projecten worden hier toegevoegd.",
+  "projects": [
+    {
+      "tag": "Portfolio",
+      "title": "Leonard Rieksen Fotografie",
+      "text": "Strakke presentatie van werk, snelle laadtijd en duidelijke navigatie.",
+      "image": "/assets/img/uploads/schermΓö¼┬íafbeelding-2025-12-28-om-21.56.52.png",
+      "image_alt": "Project placeholder",
+      "href": "https://leonardrieksenfotografie.nl",
+      "link_label": "Bekijk website",
+      "external": true,
+      "goal": "Doel: een heldere website die vertrouwen wekt en snel laadt.",
+      "built": "Gebouwd: structuur, pagina’s, styling en contactmogelijkheden.",
+      "audience": "Voor: bezoekers die snel willen zien wat het bedrijf doet en hoe ze contact opnemen."
+    }
+  ],
+  "highlights": {
+    "title": "Wat u in een project terugziet",
+    "items": [
+      "Duidelijke knoppen en een logische opbouw",
+      "Consistent design en heldere navigatie",
+      "Snelle website (ook op mobiel)",
+      "Makkelijk aan te passen: u kunt teksten en foto’s zelf wijzigen"
+    ]
+  },
+  "cta": {
+    "title": "Wilt u ook een strakke website?",
+    "text": "Wilt u iets vergelijkbaars? Stuur uw wensen; u krijgt een duidelijke offerte met vaste prijzen.",
+    "button_label": "Naar contact",
+    "button_href": "contact.html"
+  },
+  "extra": {
+    "title": "Wat deze voorbeelden laten zien",
+    "text": "Per project draait het om dezelfde basis: duidelijkheid, snelheid en een structuur die bezoekers helpt kiezen. Let vooral op indeling, call-to-actions en het tempo van de pagina.",
+    "bullets": [
+      "Heldere pagina-opbouw met logische volgorde (probleem → oplossing → actie).",
+      "Korte, concrete teksten met voldoende ademruimte.",
+      "Snelle laadtijd door compacte opbouw en geoptimaliseerde assets.",
+      "Consistente stijl die past bij het type bedrijf."
+    ]
+  },
+  "cta_mid": {
+    "title": "Benieuwd hoe dit van idee naar live site gaat?",
+    "text": "Bekijk de werkwijze. U ziet precies welke stappen er zijn en waar u input nodig is.",
+    "button_label": "Bekijk werkwijze",
+    "button_href": "werkwijze.html"
+  },
+  "ui_text": {}
+}

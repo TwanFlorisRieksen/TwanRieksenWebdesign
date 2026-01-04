@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "Twan Rieksen Webdesign",
+    "tagline": "Kant-en-klare websites voor kleine bedrijven.",
+    "city": "",
+    "logo": "/assets/img/uploads/twanlogo.png"
+  },
+  "seo": {
+    "site_description": "Strakke, snelle websites voor kleine bedrijven. Vanaf €200, met vaste add-ons.",
+    "theme_color": "#1d4ed8",
+    "og_image": "assets/img/placeholder/og.svg",
+    "site_url": "https://twanrieksenwebdesign.nl"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/",
+      "key": "home"
+    },
+    {
+      "label": "Diensten",
+      "href": "/diensten",
+      "key": "diensten"
+    },
+    {
+      "label": "Werkwijze",
+      "href": "/werkwijze",
+      "key": "werkwijze"
+    },
+    {
+      "label": "Projecten",
+      "href": "/projecten",
+      "key": "projecten"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "key": "contact"
+    }
+  ],
+  "cta": {
+    "primary_label": "Offerte aanvragen",
+    "primary_href": "https://twanrieksenwebdesign.netlify.app/contact",
+    "primary_event_label": "cta_header_offerte"
+  },
+  "contact": {
+    "email": "contact@rieksenwebstudio.nl",
+    "phone": "",
+    "socials": []
+  },
+  "footer": {
+    "note": "Strakke websites vanaf €200. Duidelijke afspraken, nette oplevering.",
+    "copyright": "© {year} Twan Rieksen Webdesign",
+    "legal_links": [
+      {
+        "label": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Cookiebeleid",
+        "href": "/cookies"
+      }
+    ]
+  },
+  "github_fallback": {
+    "owner": "TwanFlorisRieksen",
+    "repo": "TwanRieksenWebdesign",
+    "branch": "main"
+  },
+  "a11y": {
+    "skip_to_content": "Naar inhoud"
+  },
+  "search": {
+    "open_aria_label": "Zoeken",
+    "title": "Zoeken",
+    "close_aria_label": "Sluiten",
+    "term_sr": "Zoekterm",
+    "placeholder": "Zoek in pagina’s en projecten…",
+    "hint_pre": "Tip: druk op",
+    "hint_mid": "om te zoeken en",
+    "hint_post": "om te sluiten."
+  }
+}

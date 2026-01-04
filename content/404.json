@@ -1,0 +1,20 @@
+{
+  "page": {
+    "title": "Pagina niet gevonden",
+    "subtitle": "De pagina bestaat niet (meer) of de link is verkeerd. Ga terug naar home of gebruik zoeken.",
+    "meta_description": "Pagina niet gevonden. Ga terug naar home of gebruik de zoekfunctie."
+  },
+  "cta": {
+    "primary_label": "Naar home",
+    "primary_href": "index.html",
+    "secondary_label": "Naar projecten",
+    "secondary_href": "projecten.html"
+  },
+  "ui_text": {
+    "t01": "404",
+    "t02": "Pagina niet gevonden",
+    "t03": "De pagina die u zoekt bestaat niet (meer) of is verplaatst.",
+    "t04": "Naar home",
+    "t05": "Naar contact"
+  }
+}

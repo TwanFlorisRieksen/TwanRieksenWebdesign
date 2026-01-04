@@ -1,0 +1,48 @@
+{
+  "page": {
+    "title": "Contact",
+    "subtitle": "Voor zzp’ers, starters en kleine bedrijven. U krijgt snel een heldere reactie met een prijsindicatie.",
+    "meta_description": "Vraag vrijblijvend een offerte aan voor uw website. U krijgt snel een heldere reactie met prijsindicatie—zonder technisch gedoe. Geschikt voor zzp’ers, starters en kleine bedrijven."
+  },
+  "cards": [
+    {
+      "title": "Liever mailen?",
+      "text": "U kunt ook mailen als u dat prettiger vindt.",
+      "link_label": "Mailen",
+      "link_url": "mailto:contact@rieksenwebstudio.nl"
+    },
+    {
+      "title": "Overige gegevens",
+      "text": "E-mail: contact@rieksenwebstudio.nl • Telefoon: (optioneel) • Adres: (optioneel) • KvK: (optioneel)",
+      "link_label": "",
+      "link_url": ""
+    }
+  ],
+  "form": {
+    "title": "Offerte aanvragen",
+    "hint": "Omschrijf kort wat u nodig heeft. Ik reageer snel met een korte vraag of meteen met een offerte.",
+    "fields": {
+      "name_label": "Naam",
+      "email_label": "E-mail",
+      "message_label": "Wensen / toelichting",
+      "submit_label": "Versturen"
+    },
+    "messages": {
+      "invalid": "Vul uw naam, e-mailadres en bericht in.",
+      "send_failed": "Verzenden mislukt. Probeer het opnieuw.",
+      "after_submit_note": "Vrijblijvend. U zit nergens aan vast.",
+      "response_time": "Reactietijd: meestal binnen 24 uur op werkdagen.",
+      "privacy_note": "Uw gegevens gebruik ik alleen om contact op te nemen over uw aanvraag."
+    }
+  },
+  "after": {
+    "title": "Wat gebeurt er na verzending?",
+    "steps": [
+      "U krijgt direct een bevestiging.",
+      "Als iets nog niet duidelijk is, stel ik één korte vraag.",
+      "Daarna ontvangt u een duidelijke offerte met vaste prijzen."
+    ],
+    "note": "U zit nergens aan vast tot u akkoord geeft op de offerte."
+  },
+  "ui_text": {}
+}

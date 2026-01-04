@@ -1,0 +1,31 @@
+{
+  "page": {
+    "title": "Bedankt!",
+    "subtitle": "Uw aanvraag is verzonden. Ik neem zo snel mogelijk contact met u op.",
+    "meta_description": "Bedankt voor uw aanvraag. U ontvangt een bevestiging en daarna een duidelijke offerte."
+  },
+  "next": {
+    "title": "Wat gebeurt er nu?",
+    "steps": [
+      "U ontvangt een bevestiging.",
+      "Als iets niet duidelijk is, stel ik één korte vraag.",
+      "Daarna ontvangt u een duidelijke offerte met vaste prijzen."
+    ]
+  },
+  "cta": {
+    "primary_label": "Terug naar home",
+    "primary_href": "index.html",
+    "secondary_label": "Nog iets aanvullen",
+    "secondary_href": "contact.html"
+  },
+  "ui_text": {
+    "t01": "Bedankt!",
+    "t02": "Uw aanvraag is verzonden. Ik neem zo snel mogelijk contact met u op.",
+    "t03": "Wat gebeurt er nu?",
+    "t04": "U ontvangt een bevestiging.",
+    "t05": "Als iets niet duidelijk is, stel ik één korte vraag.",
+    "t06": "Daarna ontvangt u een duidelijke offerte.",
+    "t07": "Terug naar home",
+    "t08": "Nog iets aanvullen"
+  }
+}

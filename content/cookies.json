@@ -1,0 +1,50 @@
+{
+  "page": {
+    "title": "Cookieverklaring",
+    "subtitle": "Uitleg over cookies, webstatistieken en hoe u dit kunt beheren.",
+    "meta_description": "Cookieverklaring van Twan Rieksen Webdesign. Informatie over cookies, statistieken en uw instellingen."
+  },
+  "intro": "Deze website gebruikt cookies en vergelijkbare technieken om goed te functioneren en om inzicht te krijgen in het gebruik van de website. Hieronder leg ik uit welke soorten cookies er kunnen worden gebruikt en hoe u uw voorkeuren kunt instellen.",
+  "sections": [
+    {
+      "title": "1. Wat zijn cookies?",
+      "text": "Cookies zijn kleine tekstbestanden die bij uw bezoek aan een website op uw apparaat kunnen worden opgeslagen. Ze helpen bijvoorbeeld om voorkeuren te onthouden of om het gebruik van de website te meten."
+    },
+    {
+      "title": "2. Welke soorten cookies gebruik ik?",
+      "text": "Op deze website kunnen de volgende soorten cookies voorkomen:",
+      "bullets": [
+        "Noodzakelijke cookies: nodig om de website goed te laten werken (bijvoorbeeld beveiliging of basisfunctionaliteit).",
+        "Functionele cookies: onthouden van instellingen/voorkeuren (als u die gebruikt).",
+        "Analytische cookies: meten van websitegebruik om de site te verbeteren (webstatistieken via een externe dienst)."
+      ]
+    },
+    {
+      "title": "3. Analytische cookies (webstatistieken)",
+      "text": "Ik gebruik webstatistieken om te zien welke pagina’s worden bezocht en hoe de website presteert. Het doel is verbetering van de website (gebruiksgemak, snelheid, inhoud). Waar mogelijk worden gegevens geanonimiseerd of geaggregeerd verwerkt."
+    },
+    {
+      "title": "4. Cookies van derden",
+      "text": "Voor webstatistieken kan een externe partij cookies plaatsen. Deze partij verwerkt gegevens om statistieken te leveren. Ik gebruik die inzichten om de website te verbeteren."
+    },
+    {
+      "title": "5. Cookies beheren of verwijderen",
+      "text": "U kunt cookies beheren via de instellingen van uw browser. U kunt cookies verwijderen, blokkeren of instellen dat u een waarschuwing krijgt wanneer er cookies worden geplaatst. Houd er rekening mee dat de website mogelijk minder goed werkt als u bepaalde cookies blokkeert.",
+      "bullets": [
+        "Cookies verwijderen: via uw browserinstellingen.",
+        "Cookies blokkeren: via privacy-/beveiligingsinstellingen in uw browser.",
+        "Privémodus: voorkomt vaak dat cookies langdurig worden opgeslagen (afhankelijk van browser)."
+      ]
+    },
+    {
+      "title": "6. Vragen",
+      "text": "Heeft u vragen over cookies of privacy? Neem dan contact op via het contactformulier of het e-mailadres op de contactpagina."
+    },
+    {
+      "title": "7. Wijzigingen",
+      "text": "Ik kan deze cookieverklaring aanpassen als de website of gebruikte diensten veranderen. De meest recente versie staat altijd op deze pagina."
+    }
+  ],
+  "last_updated": "Laatst bijgewerkt: 3 januari 2026",
+  "ui_text": {}
+}
