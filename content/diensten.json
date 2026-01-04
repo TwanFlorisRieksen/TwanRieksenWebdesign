@@ -86,10 +86,10 @@
     "use_addons_as_options": true
   },
   "cta_mid": {
-    "title": "Wilt u eerst zien hoe ik dit opbouw?",
-    "text": "Bekijk de werkwijze. Dan weet u precies welke stappen er zijn en wat u van mij kunt verwachten.",
-    "button_label": "Bekijk werkwijze",
-    "button_href": "werkwijze.html"
+    "title": "Bekijk wat ik al heb gebouwd",
+    "text": "Zie concrete voorbeelden van websites die ik voor andere bedrijven heb gerealiseerd.",
+    "button_label": "Bekijk projecten",
+    "button_href": "projecten.html"
   },
   "expectations": {
     "title": "Wat u vooraf kunt verwachten",
