@@ -74,20 +74,20 @@
       "Praktische info: openingstijden, contactgegevens, diensten en tarieven (als u die al hebt)."
     ]
   },
-  "cta": {
-  "title": "Wilt u eerst voorbeelden zien of direct contact opnemen?",
-  "text": "Bekijk eerst mijn projecten of vraag direct een offerte aan.",
-  "buttons": [
-    {
-      "label": "Bekijk projecten",
-      "href": "projecten.html",
-      "style": "ghost"
-    },
-    {
-      "label": "Naar contact",
-      "href": "contact.html",
-      "style": "primary"
-    }
-  ]
-},
+    "cta": {
+    "title": "Wilt u eerst voorbeelden zien of direct contact opnemen?",
+    "text": "Bekijk eerst mijn projecten of vraag direct een offerte aan.",
+    "buttons": [
+      {
+        "label": "Bekijk projecten",
+        "href": "projecten.html",
+        "style": "ghost"
+      },
+      {
+        "label": "Naar contact",
+        "href": "contact.html",
+        "style": "primary"
+      }
+    ]
+  }
 }
