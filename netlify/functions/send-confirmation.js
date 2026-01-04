@@ -21,7 +21,7 @@ exports.handler = async (event) => {
 
     // Tot je domein verified is: gebruik onboarding@resend.dev als from
     // en zet jouw eigen domein in reply_to.
-    const from = "Twan Rieksen Webdesign <no-reply@twanrieksenwebdesign.nl>";
+    const from = "Twan Rieksen Webdesign <onboarding@resend.dev>";
     const reply_to = "twan.rieksen@gmail.com";
 
     const subject = "Bevestiging: uw bericht is goed ontvangen";
