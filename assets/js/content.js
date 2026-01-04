@@ -400,47 +400,65 @@ function mountDiensten(page){
   }
 }
 
-  function mountWerkwijze(page){
-    const steps = $('[data-mount="werkwijze.steps"]');
-    if(steps){
-      steps.innerHTML = '';
-      (page.steps||[]).forEach(s=>{
-        const el = document.createElement('div');
-        el.className = 'step reveal';
-        el.innerHTML = `<p class="t"></p><p class="p"></p>`;
-        el.querySelector('.t').textContent = s.title || '';
-        el.querySelector('.p').textContent = s.text || '';
-        steps.appendChild(el);
-      });
-    }
-    const need = $('[data-mount="werkwijze.need.items"]');
-    if(need){
-      need.innerHTML = '';
-      (page.need?.items||[]).forEach(t=>{
-        const li = document.createElement('li');
-        li.textContent = t;
-        need.appendChild(li);
-      });
-    }
-    const rules = $('[data-mount="werkwijze.rules.items"]');
-    if(rules){
-      rules.innerHTML = '';
-      (page.rules?.items||[]).forEach(t=>{
-        const li = document.createElement('li');
-        li.textContent = t;
-        rules.appendChild(li);
-      });
-    }
-        const platforms = $('[data-mount="werkwijze.platforms.items"]');
-    if(platforms){
-      platforms.innerHTML = '';
-      (page.platforms?.items||[]).forEach(t=>{
-        const li = document.createElement('li');
-        li.textContent = t;
-        platforms.appendChild(li);
-      });
-    }
+function mountWerkwijze(page){
+  // Steps
+  const steps = $('[data-mount="werkwijze.steps"]');
+  if(steps){
+    steps.innerHTML = '';
+    (page.steps||[]).forEach(s=>{
+      const el = document.createElement('div');
+      el.className = 'step reveal';
+      el.innerHTML = `<p class="t"></p><p class="p"></p>`;
+      el.querySelector('.t').textContent = s.title || '';
+      el.querySelector('.p').textContent = s.text || '';
+      steps.appendChild(el);
+    });
   }
+
+  // Wat u nodig heeft (need)
+  const need = $('[data-mount="werkwijze.need.items"]');
+  if(need){
+    need.innerHTML = '';
+    (page.need?.items||[]).forEach(t=>{
+      const li = document.createElement('li');
+      li.textContent = t;
+      need.appendChild(li);
+    });
+  }
+
+  // Regels / afspraken (rules)
+  const rules = $('[data-mount="werkwijze.rules.items"]');
+  if(rules){
+    rules.innerHTML = '';
+    (page.rules?.items||[]).forEach(t=>{
+      const li = document.createElement('li');
+      li.textContent = t;
+      rules.appendChild(li);
+    });
+  }
+
+  // Platforms (platforms)
+  const platforms = $('[data-mount="werkwijze.platforms.items"]');
+  if(platforms){
+    platforms.innerHTML = '';
+    (page.platforms?.items||[]).forEach(t=>{
+      const li = document.createElement('li');
+      li.textContent = t;
+      platforms.appendChild(li);
+    });
+  }
+
+  // NIEUW: extra (extra.items)
+  const extra = $('[data-mount="werkwijze.extra.items"]');
+  if(extra){
+    extra.innerHTML = '';
+    (page.extra?.items||[]).forEach(t=>{
+      const li = document.createElement('li');
+      li.textContent = t;
+      extra.appendChild(li);
+    });
+  }
+}
 
   function mountProjecten(page){
     const grid = $('[data-mount="projecten.projects"]');
