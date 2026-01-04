@@ -55,10 +55,10 @@
     },
     {
       "type": "cta",
-      "title": "Bekijk voorbeelden van mijn werk",
-      "text": "Zie hoe websites eruitzien die ik voor andere bedrijven heb gemaakt.",
-      "button_label": "Bekijk projecten",
-      "button_href": "projecten.html"
+      "title": "Wat krijgt u precies?",
+      "text": "Bekijk welke diensten ik aanbied, wat daarbij inbegrepen is en hoe het traject eruitziet.",
+      "button_label": "Bekijk diensten",
+      "button_href": "diensten.html"
     },
     {
       "type": "feature_grid",
