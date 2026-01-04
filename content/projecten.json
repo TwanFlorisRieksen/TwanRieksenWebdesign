@@ -1,0 +1,68 @@
+{
+  "page": {
+    "title": "Projecten",
+    "subtitle": "Portfolio dat klaar is voor groei.",
+    "meta_description": "Bekijk projecten en resultaten: snelle, professionele websites voor zzp’ers en kleine bedrijven. Ziet u wat u zoekt? Neem vrijblijvend contact op.",
+    "usp": "Bekijk wat u kunt verwachten: strakke sites die aanvragen opleveren."
+  },
+  "intro": "Nieuwe projecten worden hier toegevoegd.",
+  "projects": [
+    {
+      "tag": "Portfolio",
+      "title": "Leonard Rieksen Fotografie",
+      "text": "Strakke presentatie van werk, snelle laadtijd en duidelijke navigatie.",
+      "image": "/assets/img/uploads/schermΓö¼┬íafbeelding-2025-12-28-om-21.56.52.png",
+      "image_alt": "Project placeholder",
+      "href": "https://leonardrieksenfotografie.nl",
+      "link_label": "Bekijk website",
+      "external": true,
+      "goal": "Een heldere website die vertrouwen wekt en aanvragen oplevert.",
+      "built": "Ontwerp, bouw en basis-SEO, inclusief snelle performance.",
+      "audience": "Zzp’er of klein bedrijf",
+      "event_label": "projecten_project_leonard_rieksen_fotografie"
+    }
+  ],
+  "highlights": {
+    "title": "Wat u in een project terugziet",
+    "items": [
+      "Duidelijke knoppen en een logische opbouw",
+      "Consistent design en heldere navigatie",
+      "Snelle website (ook op mobiel)",
+      "Makkelijk aan te passen: u kunt teksten en foto’s zelf wijzigen"
+    ]
+  },
+  "cta": {
+    "title": "Wilt u ook een strakke website?",
+    "text": "",
+    "button_label": "Naar contact",
+    "button_href": "contact.html",
+    "button_event_label": "projecten_primary_contact",
+    "button_style": "primary",
+    "event_label": "cta_projecten_naar_contact"
+  },
+  "extra": {
+    "title": "Wat deze voorbeelden laten zien",
+    "text": "Per project draait het om dezelfde basis: duidelijkheid, snelheid en een structuur die bezoekers helpt kiezen. Let vooral op indeling, call-to-actions en het tempo van de pagina.",
+    "bullets": [
+      "Heldere pagina-opbouw met logische volgorde (probleem → oplossing → actie).",
+      "Korte, concrete teksten met voldoende ademruimte.",
+      "Snelle laadtijd door compacte opbouw en geoptimaliseerde assets.",
+      "Consistente stijl die past bij het type bedrijf."
+    ]
+  },
+  "cta_mid": {
+    "title": "Benieuwd hoe dit van idee naar live site gaat?",
+    "text": "Bekijk de werkwijze. U ziet precies welke stappen er zijn en waar u input nodig is.",
+    "button_label": "Bekijk werkwijze",
+    "button_href": "werkwijze.html",
+    "button_event_label": "projecten_secondary_werkwijze",
+    "button_style": "ghost",
+    "event_label": "cta_projecten_bekijk_werkwijze"
+  },
+  "labels": {
+    "goal": "Doel",
+    "built": "Gebouwd",
+    "audience": "Voor",
+    "separator": " • "
+  }
+}

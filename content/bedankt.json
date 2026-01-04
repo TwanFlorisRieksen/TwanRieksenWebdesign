@@ -1,0 +1,26 @@
+{
+  "page": {
+    "title": "Bedankt!",
+    "subtitle": "Uw aanvraag is verzonden.",
+    "meta_description": "Bedankt voor uw aanvraag. Ik neem snel contact met u op met de vervolgstap."
+  },
+  "body": {
+    "intro": "Uw aanvraag is verzonden. Ik neem zo snel mogelijk contact met u op.",
+    "title": "Wat gebeurt er nu?",
+    "bullets": [
+      "U ontvangt een bevestiging per e-mail.",
+      "Als iets niet duidelijk is, stel ik één korte vraag.",
+      "Daarna ontvangt u een heldere offerte of voorstel."
+    ],
+    "primary": {
+      "label": "Terug naar home",
+      "href": "index.html",
+      "event_label": "bedankt_primary_home"
+    },
+    "secondary": {
+      "label": "Nog iets aanvullen",
+      "href": "contact.html",
+      "event_label": "bedankt_secondary_contact"
+    }
+  }
+}
