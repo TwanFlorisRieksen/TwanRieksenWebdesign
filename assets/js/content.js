@@ -458,6 +458,25 @@ function mountWerkwijze(page){
       extra.appendChild(li);
     });
   }
+    // CTA buttons (werkwijze.cta.buttons)
+  const ctaButtonsHost = document.querySelector('[data-mount="werkwijze.cta.buttons"]');
+  if(ctaButtonsHost){
+    ctaButtonsHost.innerHTML = '';
+
+    const buttons = page.cta?.buttons || [];
+    buttons.forEach((b) => {
+      const a = document.createElement('a');
+
+      // style: "primary" of "ghost" (default ghost)
+      const style = (b.style || 'ghost').toLowerCase().trim();
+      a.className = `btn ${style === 'primary' ? 'primary' : 'ghost'}`;
+
+      a.href = b.href || '#';
+      a.textContent = b.label || 'Open';
+
+      ctaButtonsHost.appendChild(a);
+    });
+  }
 }
 
   function mountProjecten(page){
