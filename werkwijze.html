@@ -130,21 +130,14 @@
         
         
         <section class="cta-band reveal">
-          <div class="cta-inner">
-            <h3 data-bind="werkwijze.cta_mid.title"></h3>
-            <p class="muted" data-bind="werkwijze.cta_mid.text"></p>
-          </div>
-          <a class="btn primary" data-bind="werkwijze.cta_mid.button_label" data-bind-href="werkwijze.cta_mid.button_href" href="projecten.html">Bekijk projecten</a>
-        </section>
-<div class="note-bar reveal" data-bind="werkwijze.note"></div>
+  <div class="cta-inner">
+    <h3 data-bind="werkwijze.cta.title"></h3>
+    <p class="muted" data-bind="werkwijze.cta.text"></p>
+  </div>
 
-        <section class="cta-band reveal">
-          <div class="cta-inner">
-            <h3 data-bind="werkwijze.cta.title"></h3>
-            <p class="muted" data-bind="werkwijze.cta.text"></p>
-          </div>
-          <a class="btn primary" data-bind="werkwijze.cta.button_label" href="contact.html">Naar contact</a>
-        </section>
+  <!-- Buttons worden via content.js gerenderd -->
+  <div class="cta-actions" data-mount="werkwijze.cta.buttons"></div>
+</section>
 
       </div>
     </section>
