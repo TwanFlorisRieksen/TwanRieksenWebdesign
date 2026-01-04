@@ -55,10 +55,10 @@
     },
     {
       "type": "cta",
-      "title": "Wilt u eerst zien hoe ik dit aanpak?",
-      "text": "Bekijk de werkwijze. U ziet de stappen, de scope en waar u op kunt rekenen—zonder technisch gedoe.",
-      "button_label": "Bekijk werkwijze",
-      "button_href": "werkwijze.html"
+      "title": "Bekijk voorbeelden van mijn werk",
+      "text": "Zie hoe websites eruitzien die ik voor andere bedrijven heb gemaakt.",
+      "button_label": "Bekijk projecten",
+      "button_href": "projecten.html"
     },
     {
       "type": "feature_grid",
