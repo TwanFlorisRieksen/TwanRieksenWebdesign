@@ -35,14 +35,6 @@
     "subtitle": "U hoeft niets technisch te doen. Ik regel de bouw en zet alles daarna volledig op uw naam.",
     "meta_description": "Zo werk ik: van intake tot oplevering. Heldere stappen, duidelijke afspraken en geen technisch gedoe voor u."
   },
-  "cta": {
-    "title": "wilt u eerst voorbeelden zien of gelijk contact opnemen?",
-    "text": "bekijk eerst mijn projecten of vraag gelijk een offerte aan.",
-    "button_label": "Naar contact",
-    "button_href": "contact.html"
-    "button_label": "Bekijk projecten",
-    "button_href": "projecten.html"
-  },
   "steps_subtitle": "Ik bouw alles eerst in mijn eigen omgeving. Pas als u tevreden bent, zet ik de website, het beheer en de statistieken stap voor stap over naar u.",
   "platforms": {
     "title": "Platformen en beheer",
@@ -82,10 +74,20 @@
       "Praktische info: openingstijden, contactgegevens, diensten en tarieven (als u die al hebt)."
     ]
   },
-  "cta_mid": {
-    "title": "Wilt u voorbeelden zien vóór u beslist?",
-    "text": "Bekijk projecten met verschillende soorten bedrijven. Dan weet u snel of de stijl past.",
-    "button_label": "Bekijk projecten",
-    "button_href": "projecten.html"
-  }
+  "cta": {
+  "title": "Wilt u eerst voorbeelden zien of direct contact opnemen?",
+  "text": "Bekijk eerst mijn projecten of vraag direct een offerte aan.",
+  "buttons": [
+    {
+      "label": "Bekijk projecten",
+      "href": "projecten.html",
+      "style": "ghost"
+    },
+    {
+      "label": "Naar contact",
+      "href": "contact.html",
+      "style": "primary"
+    }
+  ]
+},
 }
