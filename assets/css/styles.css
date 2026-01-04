@@ -912,3 +912,10 @@ p + p{ margin-top: 10px; }
   /* Zachte overlay die naar onder toe "dichtloopt" */
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.95));
 }
+
+.cta-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
