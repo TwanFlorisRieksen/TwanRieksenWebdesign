@@ -1,0 +1,40 @@
+{
+  "page": {
+    "title": "Contact",
+    "subtitle": "Laat uw wensen achter. U ontvangt een duidelijke offerte op basis van wat u nodig heeft.",
+    "meta_description": "Offerte aanvragen of een vraag? Stuur uw wensen door en u krijgt snel een heldere reactie met een prijsindicatie. Midden-Nederland."
+  },
+  "cards": [
+    {
+      "title": "Liever mailen?",
+      "text": "U kunt ook mailen als u dat prettiger vindt.",
+      "link_label": "Mailen",
+      "link_url": "mailto:contact@rieksenwebstudio.nl"
+    },
+    {
+      "title": "Overige gegevens",
+      "text": "E-mail: contact@rieksenwebstudio.nl • Telefoon: (optioneel) • Adres: (optioneel) • KvK: (optioneel)",
+      "link_label": "",
+      "link_url": ""
+    }
+  ],
+  "form": {
+    "title": "Offerte aanvragen",
+    "hint": "Omschrijf kort wat u nodig heeft. Ik reageer snel met een korte vraag of meteen met een offerte.",
+    "fields": {
+      "name_label": "Naam",
+      "email_label": "E-mail",
+      "message_label": "Wensen / toelichting",
+      "submit_label": "Versturen"
+    }
+  },
+  "after": {
+    "title": "Wat gebeurt er na verzending?",
+    "steps": [
+      "U krijgt een bevestiging.",
+      "Ik stel eventueel één korte vraag.",
+      "U ontvangt een offerte."
+    ],
+    "note": "U zit nergens aan vast tot u akkoord geeft op de offerte."
+  }
+}
