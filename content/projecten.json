@@ -1,8 +1,8 @@
 {
   "page": {
     "title": "Projecten",
-    "subtitle": "Voor zzp’ers en kleine bedrijven: strak, snel en duidelijk.",
-    "meta_description": "Bekijk recente projecten en zie wat er mogelijk is. Strakke, snelle websites zonder technisch gedoe—ik regel bouw, testen en livegang. Klaar voor een offerte? Neem contact op."
+    "subtitle": "Portfolio dat klaar is voor groei.",
+    "meta_description": "Voorbeelden van websites en projecten. Strakke, snelle pagina’s die vertrouwen uitstralen en klanten laten doorklikken."
   },
   "intro": "Nieuwe projecten worden hier toegevoegd.",
   "projects": [
@@ -14,10 +14,7 @@
       "image_alt": "Project placeholder",
       "href": "https://leonardrieksenfotografie.nl",
       "link_label": "Bekijk website",
-      "external": true,
-      "goal": "Doel: een heldere website die vertrouwen wekt en snel laadt.",
-      "built": "Gebouwd: structuur, pagina’s, styling en contactmogelijkheden.",
-      "audience": "Voor: bezoekers die snel willen zien wat het bedrijf doet en hoe ze contact opnemen."
+      "external": true
     }
   ],
   "highlights": {
@@ -31,7 +28,7 @@
   },
   "cta": {
     "title": "Wilt u ook een strakke website?",
-    "text": "Wilt u iets vergelijkbaars? Stuur uw wensen; u krijgt een duidelijke offerte met vaste prijzen.",
+    "text": "",
     "button_label": "Naar contact",
     "button_href": "contact.html"
   },
@@ -50,6 +47,5 @@
     "text": "Bekijk de werkwijze. U ziet precies welke stappen er zijn en waar u input nodig is.",
     "button_label": "Bekijk werkwijze",
     "button_href": "werkwijze.html"
-  },
-  "ui_text": {}
+  }
 }

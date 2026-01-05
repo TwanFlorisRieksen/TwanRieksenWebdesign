@@ -63,20 +63,6 @@
       const v = getByPath(ctx, p);
       if(v) el.setAttribute('href', String(v));
     });
-
-    // data-bind-placeholder (inputs / textareas)
-    $$('[data-bind-placeholder]', root).forEach(el=>{
-      const p = el.getAttribute('data-bind-placeholder');
-      const v = getByPath(ctx, p);
-      if(v !== undefined) el.setAttribute('placeholder', String(v));
-    });
-
-    // data-bind-aria-label
-    $$('[data-bind-aria-label]', root).forEach(el=>{
-      const p = el.getAttribute('data-bind-aria-label');
-      const v = getByPath(ctx, p);
-      if(v !== undefined) el.setAttribute('aria-label', String(v));
-    });
   }
 
   function getByPath(obj, path){
@@ -506,23 +492,12 @@ function mountWerkwijze(page){
           <div class="badge"></div>
           <h3 class="project-title"></h3>
           <p class="project-text"></p>
-          <ul class="bullets" data-slot="project-details"></ul>
           <a class="small-link" target="_blank" rel="noopener noreferrer"></a>
         </div>
       `;
       card.querySelector('.badge').textContent = p.tag || '';
       card.querySelector('.project-title').textContent = p.title || '';
       card.querySelector('.project-text').textContent = p.text || '';
-      const details = card.querySelector('[data-slot="project-details"]');
-      if(details){
-        details.innerHTML = '';
-        const lines = [p.goal, p.built, p.audience].filter(Boolean);
-        lines.forEach(line=>{
-          const li = document.createElement('li');
-          li.textContent = line;
-          details.appendChild(li);
-        });
-      }
       const img = card.querySelector('img');
       img.src = p.image || 'assets/img/placeholder/project-1.svg';
       img.alt = p.image_alt || '';

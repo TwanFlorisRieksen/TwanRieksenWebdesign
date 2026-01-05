@@ -32,10 +32,10 @@
   ],
   "page": {
     "title": "Werkwijze",
-    "subtitle": "In 7 duidelijke stappen, zonder technisch gedoe.",
-    "meta_description": "Zo werkt het: van korte intake tot oplevering op uw naam. U hoeft niets technisch te kunnen; ik regel opzet, testen en livegang. Bekijk de stappen en neem contact op."
+    "subtitle": "U hoeft niets technisch te doen. Ik regel de bouw en zet alles daarna volledig op uw naam.",
+    "meta_description": "Zo werk ik: van intake tot oplevering. Heldere stappen, duidelijke afspraken en geen technisch gedoe voor u."
   },
-  "steps_subtitle": "Korte intake, helder plan en snelle uitvoering. U ziet tussendoor een preview, geeft feedback, en daarna zet ik alles op uw naam.",
+  "steps_subtitle": "Ik bouw alles eerst in mijn eigen omgeving. Pas als u tevreden bent, zet ik de website, het beheer en de statistieken stap voor stap over naar u.",
   "platforms": {
     "title": "Platformen en beheer",
     "items": [
@@ -74,21 +74,20 @@
       "Praktische info: openingstijden, contactgegevens, diensten en tarieven (als u die al hebt)."
     ]
   },
-  "cta": {
+    "cta": {
     "title": "Wilt u eerst voorbeelden zien of direct contact opnemen?",
-    "text": "Wilt u starten of eerst één vraag stellen? Stuur uw wensen; ik reageer snel met een heldere vervolgstap.",
+    "text": "Bekijk eerst mijn projecten of vraag direct een offerte aan.",
     "buttons": [
-      {
-        "label": "Naar contact",
-        "href": "contact.html",
-        "style": "primary"
-      },
       {
         "label": "Bekijk projecten",
         "href": "projecten.html",
         "style": "ghost"
+      },
+      {
+        "label": "Naar contact",
+        "href": "contact.html",
+        "style": "primary"
       }
     ]
-  },
-  "ui_text": {}
+  }
 }

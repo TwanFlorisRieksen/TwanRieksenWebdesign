@@ -1,8 +1,8 @@
 {
   "page": {
     "title": "Contact",
-    "subtitle": "Voor zzp’ers, starters en kleine bedrijven. U krijgt snel een heldere reactie met een prijsindicatie.",
-    "meta_description": "Vraag vrijblijvend een offerte aan voor uw website. U krijgt snel een heldere reactie met prijsindicatie—zonder technisch gedoe. Geschikt voor zzp’ers, starters en kleine bedrijven."
+    "subtitle": "Laat uw wensen achter. U ontvangt een duidelijke offerte op basis van wat u nodig heeft.",
+    "meta_description": "Offerte aanvragen of een vraag? Stuur uw wensen door en u krijgt snel een heldere reactie met een prijsindicatie. Midden-Nederland."
   },
   "cards": [
     {
@@ -26,23 +26,15 @@
       "email_label": "E-mail",
       "message_label": "Wensen / toelichting",
       "submit_label": "Versturen"
-    },
-    "messages": {
-      "invalid": "Vul uw naam, e-mailadres en bericht in.",
-      "send_failed": "Verzenden mislukt. Probeer het opnieuw.",
-      "after_submit_note": "Vrijblijvend. U zit nergens aan vast.",
-      "response_time": "Reactietijd: meestal binnen 24 uur op werkdagen.",
-      "privacy_note": "Uw gegevens gebruik ik alleen om contact op te nemen over uw aanvraag."
     }
   },
   "after": {
     "title": "Wat gebeurt er na verzending?",
     "steps": [
-      "U krijgt direct een bevestiging.",
-      "Als iets nog niet duidelijk is, stel ik één korte vraag.",
-      "Daarna ontvangt u een duidelijke offerte met vaste prijzen."
+      "U krijgt een bevestiging.",
+      "Ik stel eventueel één korte vraag.",
+      "U ontvangt een offerte."
     ],
     "note": "U zit nergens aan vast tot u akkoord geeft op de offerte."
-  },
-  "ui_text": {}
+  }
 }

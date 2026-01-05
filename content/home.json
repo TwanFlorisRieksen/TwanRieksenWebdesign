@@ -2,14 +2,14 @@
   "page": {
     "title": "Home",
     "subtitle": "",
-    "meta_description": "Laat een snelle, strakke website bouwen zonder technisch gedoe. Vaste prijzen, duidelijke afspraken en alles op uw naam. Vraag vrijblijvend een offerte aan."
+    "meta_description": "Webdesign voor kleine bedrijven in Midden-Nederland. Snelle, professionele websites met vaste prijzen en duidelijke afspraken. Vraag vrijblijvend een offerte aan."
   },
   "hero": {
     "image_alt": "Illustratie placeholder",
     "primary_href": "contact.html",
     "secondary_label": "Bekijk projecten",
-    "eyebrow": "Voor zzp’ers, starters en kleine bedrijven",
-    "text": "U krijgt een professionele website die snel laadt en direct duidelijk maakt wat u doet. U hoeft niets technisch te regelen: ik zet alles op, test het en zet het live. U stuurt uw wensen—ik stuur u daarna een heldere offerte.",
+    "eyebrow": "Twan Rieksen Webdesign",
+    "text": "U krijgt een professionele website die snel laadt en er strak uitziet op mobiel en desktop. U vertelt kort wat u nodig heeft—ik stuur u daarna een duidelijke offerte.",
     "secondary_href": "projecten.html",
     "primary_label": "Offerte aanvragen",
     "title": "Kant-en-klare websites voor kleine bedrijven.",
@@ -150,6 +150,5 @@
       "button_label": "Offerte aanvragen",
       "button_href": "contact.html"
     }
-  ],
-  "ui_text": {}
+  ]
 }

@@ -3,11 +3,6 @@
   if (!form) return;
 
   const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-  const msgInvalidEl = document.getElementById('msg-invalid');
-  const msgFailedEl = document.getElementById('msg-send-failed');
-  const msgInvalid = () => (msgInvalidEl && msgInvalidEl.textContent.trim()) || "Vul uw naam, e-mailadres en bericht in.";
-  const msgFailed = () => (msgFailedEl && msgFailedEl.textContent.trim()) || "Verzenden mislukt. Probeer het opnieuw.";
-
 
   const isValidEmail = (v) => typeof v === 'string' && v.includes('@') && v.trim().length >= 5;
 
@@ -21,7 +16,7 @@
 
     // Basisvalidatie (minimaal, zonder gedrag te wijzigen)
     if (!naam || !email || !bericht || !isValidEmail(email)) {
-      alert(msgInvalid());
+      alert("Vul uw naam, e-mailadres en bericht in.");
       return;
     }
 
@@ -48,7 +43,7 @@
         if ('value' in submitBtn) submitBtn.value = prevText;
         else submitBtn.textContent = prevText;
       }
-      alert(msgFailed());
+      alert("Verzenden mislukt. Probeer het opnieuw.");
       return;
     }
 

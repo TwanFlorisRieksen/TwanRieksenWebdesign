@@ -40,8 +40,7 @@
   ],
   "cta": {
     "primary_label": "Offerte aanvragen",
-    "primary_href": "https://twanrieksenwebdesign.netlify.app/contact",
-    "primary_event_label": "cta_header_offerte"
+    "primary_href": "https://twanrieksenwebdesign.netlify.app/contact"
   },
   "contact": {
     "email": "contact@rieksenwebstudio.nl",
@@ -66,18 +65,5 @@
     "owner": "TwanFlorisRieksen",
     "repo": "TwanRieksenWebdesign",
     "branch": "main"
-  },
-  "a11y": {
-    "skip_to_content": "Naar inhoud"
-  },
-  "search": {
-    "open_aria_label": "Zoeken",
-    "title": "Zoeken",
-    "close_aria_label": "Sluiten",
-    "term_sr": "Zoekterm",
-    "placeholder": "Zoek in pagina’s en projecten…",
-    "hint_pre": "Tip: druk op",
-    "hint_mid": "om te zoeken en",
-    "hint_post": "om te sluiten."
   }
 }
