@@ -57,6 +57,7 @@ exports.handler = async (event) => {
 
     if (!res.ok) {
       // Belangrijk voor debuggen
+      console.error(`Resend API error (${res.status}): ${out}`);
       return {
         statusCode: 502,
         body: `Resend API error (${res.status}): ${out}`,
@@ -68,6 +69,7 @@ exports.handler = async (event) => {
       body: out,
     };
   } catch (e) {
+    console.error("Server error:", e);
     return {
       statusCode: 500,
       body: `Server error: ${e && e.message ? e.message : "unknown"}`,
