@@ -901,6 +901,24 @@ p + p{ margin-top: 10px; }
   position: relative;
 }
 .addons-card .addon-list::after{
+#back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+#back-to-top:hover {
+  opacity: 0.85;
+}
+
   content: "";
   position: sticky;
   bottom: 0;
