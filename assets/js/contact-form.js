@@ -114,7 +114,10 @@
 
     track('form_submit_success', {page: 'contact'});
 
-    // 3) Redirect
-    window.location.href = "/bedankt.html";
+// 3) Redirect — geef de knoptekst even tijd om zichtbaar te zijn
+const MIN_DISPLAY_MS = 900;
+await new Promise(r => setTimeout(r, MIN_DISPLAY_MS));
+
+window.location.href = "/bedankt.html";
   });
 })();
