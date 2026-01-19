@@ -12,6 +12,9 @@
     const originalBind = submitBtn.getAttribute('data-bind');
     const cmsIdleText = ('value' in submitBtn) ? submitBtn.value : submitBtn.textContent;
 
+    const sendingTextEl = document.getElementById('contact-submit-sending-text');
+const cmsSendingText = sendingTextEl ? String(sendingTextEl.textContent || '').trim() : '';
+
     if (originalBind) submitBtn.removeAttribute('data-bind');
 
     const isValidEmail = (v) => typeof v === 'string' && v.includes('@') && v.trim().length >= 5;
@@ -87,7 +90,7 @@
       submitBtn.setAttribute('aria-busy', 'true');
 
       // Meldingtekst op de knop
-      setBtnText('Verzonden. Bedankt! U wordt doorgestuurd...');
+      setBtnText(cmsSendingText || 'Even geduld... U wordt doorgestuurd...');
 
       // 1) Netlify Forms opslaan
       try {
