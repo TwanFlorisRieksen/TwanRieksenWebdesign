@@ -66,6 +66,9 @@
       e.preventDefault();
       clearErrors();
 
+        // Ontkoppel de knop van CMS data-bind zodat content.js onze runtime-tekst niet kan terugzetten
+  if (submitBtn) submitBtn.removeAttribute('data-bind');
+
       // Gebruik de CMS idle text als "terugval" (meestal "Versturen")
       const idleText = cmsIdleText || getBtnText();
 
