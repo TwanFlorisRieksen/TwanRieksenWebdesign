@@ -699,6 +699,9 @@ collections:
         - label: Submit label
           name: submit_label
           widget: string
+        - label: Submit (doorgestuurd) label
+          name: submit_sending_label
+          widget: string
     - label: Na verzending
       name: after
       widget: object
