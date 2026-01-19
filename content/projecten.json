@@ -7,16 +7,16 @@
   "intro": "Nieuwe projecten worden hier toegevoegd.",
   "projects": [
     {
-      "tag": "Portfolio",
-      "title": "Leonard Rieksen Fotografie",
-      "text": "Strakke presentatie van werk, snelle laadtijd en duidelijke navigatie.",
-      "image": "/assets/img/uploads/schermΓö¼┬íafbeelding-2025-12-28-om-21.56.52.png",
       "image_alt": "Project placeholder",
       "href": "https://leonardrieksenfotografie.nl",
-      "link_label": "Bekijk website",
       "external": true,
-      "goal": "",
+      "text": "Strakke presentatie van werk, snelle laadtijd en duidelijke navigatie.",
+      "link_label": "Bekijk website",
       "work": "",
+      "goal": "",
+      "title": "Leonard Rieksen Fotografie",
+      "tag": "Portfolio",
+      "image": "/assets/img/uploads/scherm­afbeelding-2026-01-19-om-21.51.50.webp",
       "result": ""
     }
   ],
