@@ -3,16 +3,18 @@
   if (!form) return;
 
   const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-  const msg = document.getElementById('form-message');
 
   const isValidEmail = (v) => typeof v === 'string' && v.includes('@') && v.trim().length >= 5;
 
-  const setMessage = (type, text) => {
-    if (!msg) return;
-    msg.textContent = text || '';
-    msg.classList.remove('is-error','is-success');
-    if (type === 'error') msg.classList.add('is-error');
-    if (type === 'success') msg.classList.add('is-success');
+  const getBtnText = () => {
+    if (!submitBtn) return '';
+    return ('value' in submitBtn) ? submitBtn.value : submitBtn.textContent;
+  };
+
+  const setBtnText = (text) => {
+    if (!submitBtn) return;
+    if ('value' in submitBtn) submitBtn.value = text;
+    else submitBtn.textContent = text;
   };
 
   const setFieldError = (name, text) => {
@@ -27,7 +29,6 @@
 
   const clearErrors = () => {
     ['naam','email','bericht'].forEach(n => setFieldError(n, ''));
-    setMessage('', '');
   };
 
   const track = (name, params) => {
@@ -60,25 +61,27 @@
     e.preventDefault();
     clearErrors();
 
+    const idleText = getBtnText();
+
     const formData = new FormData(form);
     const naam = String(formData.get("naam") || '').trim();
     const email = String(formData.get("email") || '').trim();
     const bericht = String(formData.get("bericht") || '').trim();
 
     if (!validate(naam, email, bericht)){
-      setMessage('error', 'Controleer de velden hieronder.');
+      // Zelfde feedback als voorheen, maar nu op de knop (tijdelijk)
+      setBtnText('Controleer de velden hieronder.');
+      window.setTimeout(() => setBtnText(idleText), 2500);
       return;
     }
 
-    const prevText = submitBtn && ('value' in submitBtn ? submitBtn.value : submitBtn.textContent);
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.setAttribute('aria-busy', 'true');
-      if ('value' in submitBtn) submitBtn.value = "Verzenden...";
-      else submitBtn.textContent = "Verzenden...";
     }
 
-    setMessage('success', 'Verzonden. Bedankt! U wordt doorgestuurd...');
+    // De oude meldingtekst uit het kadertje komt nu op de knop
+    setBtnText('Verzonden. Bedankt! U wordt doorgestuurd...');
 
     // 1) Netlify Forms opslaan
     try {
@@ -91,10 +94,9 @@
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.removeAttribute('aria-busy');
-        if ('value' in submitBtn) submitBtn.value = prevText;
-        else submitBtn.textContent = prevText;
       }
-      setMessage('error', 'Verzenden mislukt. Probeer het opnieuw.');
+      setBtnText('Verzenden mislukt. Probeer het opnieuw.');
+      window.setTimeout(() => setBtnText(idleText), 3000);
       track('form_submit_error', {page: 'contact'});
       return;
     }
