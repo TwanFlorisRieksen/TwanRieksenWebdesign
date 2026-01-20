@@ -69,6 +69,10 @@ const cmsSendingText = sendingTextEl ? String(sendingTextEl.textContent || '').t
       e.preventDefault();
       clearErrors();
 
+        // Immediately show "sending/redirecting" state so it is visible before redirect
+  setBtnText(cmsSendingText || 'Even geduld... U wordt doorgestuurd...');
+  submitBtn.disabled = true;
+
         // Ontkoppel de knop van CMS data-bind zodat content.js onze runtime-tekst niet kan terugzetten
   if (submitBtn) submitBtn.removeAttribute('data-bind');
 
