@@ -1,0 +1,87 @@
+{
+  "page": {
+    "title": "Privacyverklaring",
+    "subtitle": "Korte uitleg over welke gegevens ik verwerk, waarom, en wat uw rechten zijn.",
+    "meta_description": "Privacyverklaring van Twan Rieksen Webdesign. Lees hoe gegevens worden verwerkt en welke rechten u heeft."
+  },
+  "intro": "Ik ga zorgvuldig om met uw persoonsgegevens. Op deze pagina leg ik in duidelijke taal uit welke gegevens ik verzamel, voor welke doelen, met wie ik ze deel en hoe lang ik ze bewaar. Deze verklaring is van toepassing op het gebruik van deze website en het aanvragen van een offerte via het contactformulier.",
+  "sections": [
+    {
+      "title": "1. Wie is verantwoordelijk?",
+      "text": "Twan Rieksen Webdesign (hierna: “ik”). U kunt contact opnemen via het contactformulier op de contactpagina of per e-mail via het adres dat op de contactpagina staat."
+    },
+    {
+      "title": "2. Welke gegevens verwerk ik?",
+      "text": "Ik verwerk alleen gegevens die nodig zijn om uw bericht te beantwoorden, een offerte te maken en de website goed te laten werken.",
+      "bullets": [
+        "Contactgegevens die u zelf invult: naam, e-mail en de inhoud van uw bericht.",
+        "Technische gegevens die uw browser meestuurt: bijvoorbeeld apparaat- en browserinformatie en (beperkt) loggegevens.",
+        "Bezoekgegevens voor webstatistieken: bijvoorbeeld welke pagina’s worden bezocht en hoe lang (in geaggregeerde vorm)."
+      ]
+    },
+    {
+      "title": "3. Waarvoor gebruik ik uw gegevens?",
+      "text": "Ik gebruik uw gegevens alleen voor onderstaande doelen:",
+      "bullets": [
+        "Het behandelen van uw aanvraag en contact opnemen over uw wensen.",
+        "Het opstellen en toesturen van een offerte.",
+        "Het verbeteren van de website op basis van geanonimiseerde of geaggregeerde bezoekstatistieken.",
+        "Beveiliging en het voorkomen van misbruik (bijvoorbeeld spam via formulieren)."
+      ]
+    },
+    {
+      "title": "4. Op welke grondslag verwerk ik gegevens?",
+      "text": "Ik verwerk persoonsgegevens op basis van één of meer van deze grondslagen:",
+      "bullets": [
+        "Uitvoering van een overeenkomst of het nemen van stappen op uw verzoek (bijvoorbeeld een offerteaanvraag).",
+        "Gerechtvaardigd belang (bijvoorbeeld websitebeveiliging en het verbeteren van de website met statistieken).",
+        "Toestemming (alleen wanneer dat van toepassing is, bijvoorbeeld bij bepaalde cookies/instellingen in uw browser)."
+      ]
+    },
+    {
+      "title": "5. Delen met derden (verwerkers)",
+      "text": "Voor het draaien van de website en het verwerken van formulierinzendingen maak ik gebruik van externe partijen die als verwerker optreden. Zij verwerken gegevens alleen in mijn opdracht en voor het leveren van hun dienst.",
+      "bullets": [
+        "Hosting en levering van de website (inclusief technische logging).",
+        "Formulierverwerking: inzendingen worden via de hostingomgeving verwerkt en aan mij doorgestuurd.",
+        "Webstatistieken: een externe analysedienst meet geanonimiseerde/geaggregeerde gebruiksgegevens om de website te verbeteren."
+      ]
+    },
+    {
+      "title": "6. Webstatistieken en IP-adressen",
+      "text": "Ik gebruik webstatistieken om te begrijpen welke pagina’s nuttig zijn en waar bezoekers vastlopen. Hierbij streef ik naar zo min mogelijk herleidbare gegevens. Waar mogelijk worden gegevens geanonimiseerd of geaggregeerd verwerkt."
+    },
+    {
+      "title": "7. Bewaartermijnen",
+      "text": "Ik bewaar persoonsgegevens niet langer dan nodig.",
+      "bullets": [
+        "Offerte- en contactaanvragen: maximaal 12 maanden, tenzij er een opdracht uit volgt.",
+        "Bij een opdracht: gegevens die nodig zijn voor uitvoering/administratie bewaar ik zolang dat redelijk en/of wettelijk noodzakelijk is.",
+        "Technische logs: zo kort mogelijk, passend bij beveiliging en beheer."
+      ]
+    },
+    {
+      "title": "8. Beveiliging",
+      "text": "Ik neem passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen verlies of onbevoegde toegang. Denk aan veilige verbindingen, toegangsbeperkingen en het beperken van data tot wat nodig is."
+    },
+    {
+      "title": "9. Uw rechten",
+      "text": "U heeft rechten onder de privacywetgeving. U kunt mij verzoeken om:",
+      "bullets": [
+        "Inzage in uw persoonsgegevens.",
+        "Correctie of verwijdering van gegevens.",
+        "Beperking van verwerking of bezwaar tegen verwerking.",
+        "Gegevensoverdraagbaarheid (voor zover van toepassing)."
+      ]
+    },
+    {
+      "title": "10. Klachten",
+      "text": "Komt u er met mij niet uit, dan kunt u een klacht indienen bij de toezichthouder in Nederland (Autoriteit Persoonsgegevens)."
+    },
+    {
+      "title": "11. Wijzigingen",
+      "text": "Ik kan deze privacyverklaring aanpassen als de website of werkwijze verandert. De meest recente versie staat altijd op deze pagina."
+    }
+  ],
+  "last_updated": "Laatst bijgewerkt: 3 januari 2026"
+}

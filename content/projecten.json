@@ -1,0 +1,59 @@
+{
+  "page": {
+    "title": "Projecten",
+    "subtitle": "Portfolio dat klaar is voor groei.",
+    "meta_description": "Voorbeelden van websites en projecten. Strakke, snelle pagina’s die vertrouwen uitstralen en klanten laten doorklikken."
+  },
+  "intro": "Nieuwe projecten worden hier toegevoegd.",
+  "projects": [
+    {
+      "image_alt": "Project placeholder",
+      "href": "https://leonardrieksenfotografie.nl",
+      "external": true,
+      "text": "Strakke presentatie van werk, snelle laadtijd en duidelijke navigatie.",
+      "link_label": "Bekijk website",
+      "work": "",
+      "goal": "",
+      "title": "Leonard Rieksen Fotografie",
+      "tag": "Portfolio",
+      "image": "/assets/img/uploads/scherm­afbeelding-2026-01-19-om-21.51.50.webp",
+      "result": ""
+    }
+  ],
+  "highlights": {
+    "title": "Wat u in een project terugziet",
+    "items": [
+      "Duidelijke knoppen en een logische opbouw",
+      "Consistent design en heldere navigatie",
+      "Snelle website (ook op mobiel)",
+      "Makkelijk aan te passen: u kunt teksten en foto’s zelf wijzigen"
+    ]
+  },
+  "cta": {
+    "title": "Wilt u ook een strakke website?",
+    "text": "",
+    "button_label": "Naar contact",
+    "button_href": "contact.html"
+  },
+  "extra": {
+    "title": "Wat deze voorbeelden laten zien",
+    "text": "Per project draait het om dezelfde basis: duidelijkheid, snelheid en een structuur die bezoekers helpt kiezen. Let vooral op indeling, call-to-actions en het tempo van de pagina.",
+    "bullets": [
+      "Heldere pagina-opbouw met logische volgorde (probleem → oplossing → actie).",
+      "Korte, concrete teksten met voldoende ademruimte.",
+      "Snelle laadtijd door compacte opbouw en geoptimaliseerde assets.",
+      "Consistente stijl die past bij het type bedrijf."
+    ]
+  },
+  "cta_mid": {
+    "title": "Benieuwd hoe dit van idee naar live site gaat?",
+    "text": "Bekijk de werkwijze. U ziet precies welke stappen er zijn en waar u input nodig is.",
+    "button_label": "Bekijk werkwijze",
+    "button_href": "werkwijze.html"
+  },
+  "projects_context_labels": {
+    "goal": "Doel",
+    "work": "Werk",
+    "result": "Resultaat"
+  }
+}
