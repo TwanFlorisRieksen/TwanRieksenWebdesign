@@ -14,14 +14,16 @@
 
     const isValidEmail = (v) => typeof v === 'string' && v.includes('@') && v.trim().length >= 5;
 
+    const isInputButton = submitBtn instanceof HTMLInputElement;
+
     const getBtnText = () => {
-      if ('value' in submitBtn) return submitBtn.value;
+      if (isInputButton) return submitBtn.value;
       if (submitLabel) return submitLabel.textContent;
       return submitBtn.textContent;
     };
 
     const setBtnText = (text) => {
-      if ('value' in submitBtn) {
+      if (isInputButton) {
         submitBtn.value = text;
         return;
       }
