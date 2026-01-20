@@ -15,13 +15,13 @@
     const isValidEmail = (v) => typeof v === 'string' && v.includes('@') && v.trim().length >= 5;
 
     const getBtnText = () => {
-      if (submitBtn.tagName === 'INPUT') return submitBtn.value;
+      if ('value' in submitBtn) return submitBtn.value;
       if (submitLabel) return submitLabel.textContent;
       return submitBtn.textContent;
     };
 
     const setBtnText = (text) => {
-      if (submitBtn.tagName === 'INPUT') {
+      if ('value' in submitBtn) {
         submitBtn.value = text;
         return;
       }
