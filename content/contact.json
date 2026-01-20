@@ -26,7 +26,7 @@
       "name_label": "Naam",
       "email_label": "E-mail",
       "message_label": "Wensen / toelichting",
-      "submit_label": "Versturen"
+      "submit_label": "Versturen",
       "submit_sending_label": "Even geduld... U wordt doorgestuurd..."
     },
     "reassurance": [
