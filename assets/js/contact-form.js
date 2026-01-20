@@ -92,10 +92,7 @@ const cmsSendingText = sendingTextEl ? String(sendingTextEl.textContent || '').t
 
       submitBtn.disabled = true;
       submitBtn.setAttribute('aria-busy', 'true');
-
-      // Meldingtekst op de knop
-      setBtnText(cmsSendingText || 'Even geduld... U wordt doorgestuurd...');
-
+      
       // 1) Netlify Forms opslaan
       try {
         await fetch("/", {
