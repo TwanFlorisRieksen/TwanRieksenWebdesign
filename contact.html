@@ -126,7 +126,9 @@
             <textarea name="bericht" rows="7" required></textarea>
             <div class="field-error" data-error-for="bericht"></div>
           </label>
-          <button class="btn primary full" type="submit" data-bind="contact.form.fields.submit_label">Versturen</button>
+          <button class="btn primary full" type="submit">
+  <span id="contact-submit-label" data-bind="contact.form.fields.submit_label">Versturen</span>
+</button>
           <span id="contact-submit-sending-text" data-bind="contact.form.fields.submit_sending_label" hidden></span>
           <ul class="bullets muted small" data-mount="contact.form.reassurance"></ul>
           <p class="muted small" data-mount="contact.form.privacy_note"></p>
