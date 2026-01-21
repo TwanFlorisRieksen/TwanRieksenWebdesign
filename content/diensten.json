@@ -103,28 +103,5 @@
       "Ik werk met een preview-link: u kunt rustig feedback geven.",
       "Na oplevering staat alles op uw naam; u houdt de toegang."
     ]
-  },
-  "social_proof": {
-    "badge": "Ervaringen",
-    "title": "Gebouwd voor zzp’ers en kleine bedrijven",
-    "subtitle": "Korte, duidelijke feedback van klanten. Geen opgeblazen claims.",
-    "stats": "2–3 weken live • Heldere afspraken",
-    "items": [
-      {
-        "name": "Zzp’er (dienstverlening)",
-        "meta": "Nieuwe site",
-        "text": "Duidelijk proces en snel live. Ik hoefde niks technisch te doen."
-      },
-      {
-        "name": "Starter",
-        "meta": "One‑pager",
-        "text": "Binnen korte tijd een professionele site. Fijn dat alles werd uitgelegd."
-      },
-      {
-        "name": "Klein bedrijf",
-        "meta": "Update + structuur",
-        "text": "Meer overzicht en betere aanvragen. Communicatie was strak en snel."
-      }
-    ]
   }
 }
