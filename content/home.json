@@ -18,34 +18,6 @@
   },
   "sections": [
     {
-      "type": "testimonials",
-      "title": "Wat klanten zeggen",
-      "subtitle": "Korte reacties na oplevering.",
-      "items": [
-        {
-          "name": "Anouk",
-          "meta": "Praktijkhouder",
-          "text": "Fijn contact en duidelijke stappen. De site staat nu netjes online en is makkelijk bij te houden."
-        },
-        {
-          "name": "Mark",
-          "meta": "ZZP’er",
-          "text": "Snel schakelen en geen gedoe. Alles werd rustig uitgelegd en volgens afspraak opgeleverd."
-        },
-        {
-          "name": "Sanne",
-          "meta": "Salon-eigenaar",
-          "text": "Strak design en goede structuur. Klanten vinden sneller wat ze zoeken en de site voelt professioneel."
-        },
-        {
-          "name": "Leo",
-          "meta": "Fotograaf",
-          "text": "Netjes opgeleverd en precies volgens afspraak. De website oogt professioneel en laadt snel."
-        }
-      ],
-      "stats": ""
-    },
-    {
       "type": "feature_grid",
       "title": "Waarom dit werkt",
       "subtitle": "",
@@ -122,6 +94,34 @@
           "link_label": "Bekijk website"
         }
       ]
+    },
+    {
+      "type": "testimonials",
+      "title": "Wat klanten zeggen",
+      "subtitle": "Korte reacties na oplevering.",
+      "items": [
+        {
+          "name": "Anouk",
+          "meta": "Praktijkhouder",
+          "text": "Fijn contact en duidelijke stappen. De site staat nu netjes online en is makkelijk bij te houden."
+        },
+        {
+          "name": "Mark",
+          "meta": "ZZP’er",
+          "text": "Snel schakelen en geen gedoe. Alles werd rustig uitgelegd en volgens afspraak opgeleverd."
+        },
+        {
+          "name": "Sanne",
+          "meta": "Salon-eigenaar",
+          "text": "Strak design en goede structuur. Klanten vinden sneller wat ze zoeken en de site voelt professioneel."
+        },
+        {
+          "name": "Leo",
+          "meta": "Fotograaf",
+          "text": "Netjes opgeleverd en precies volgens afspraak. De website oogt professioneel en laadt snel."
+        }
+      ],
+      "stats": ""
     },
     {
       "type": "faq",
