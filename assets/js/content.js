@@ -687,34 +687,43 @@ function mountLegal(page){
   });
 }
 
-  async function buildSearchIndex(site, pages){
+async function buildSearchIndex(site, pages){
     // Create a basic search index across known pages and project titles/descriptions
     const items = [];
-    for(const key of pages){
-      try{
-        const page = await fetchJSON(`content/${key}.json`, site.github_fallback);
-        items.push({
-          key,
-          title: page.page?.title || key,
-          snippet: page.page?.subtitle || '',
-          href: key === 'home' ? 'index.html' : `${key}.html`,
-          text: JSON.stringify(page)
-        });
-        if(key === 'projecten'){
-          (page.projects||[]).forEach(p=>{
-            items.push({
-              key: 'project',
-              title: p.title || 'Project',
-              snippet: p.text || '',
-              href: p.href || 'projecten.html',
-              text: `${p.title||''} ${p.text||''} ${p.tag||''}`
-            });
+
+    const results = await Promise.all(
+      pages.map(key =>
+        fetchJSON(`content/${key}.json`, site.github_fallback)
+          .then(page => ({ key, page }))
+          .catch(() => null)
+      )
+    );
+
+    for(const entry of results){
+      if(!entry) continue;
+      const { key, page } = entry;
+
+      items.push({
+        key,
+        title: page.page?.title || key,
+        snippet: page.page?.subtitle || '',
+        href: key === 'home' ? 'index.html' : `${key}.html`,
+        text: JSON.stringify(page)
+      });
+
+      if(key === 'projecten'){
+        (page.projects||[]).forEach(p=>{
+          items.push({
+            key: 'project',
+            title: p.title || 'Project',
+            snippet: p.text || '',
+            href: p.href || 'projecten.html',
+            text: `${p.title||''} ${p.text||''} ${p.tag||''}`
           });
-        }
-      }catch(e){
-        // ignore missing
+        });
       }
     }
+
     return items;
   }
 
