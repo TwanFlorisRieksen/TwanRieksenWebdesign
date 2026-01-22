@@ -14,7 +14,7 @@
     "secondary_href": "projecten.html",
     "primary_label": "Offerte aanvragen",
     "title": "Kant-en-klare websites voor kleine bedrijven.",
-    "image": "/assets/img/uploads/hero.png"
+    "image": "/assets/img/uploads/hero.webp"
   },
   "sections": [
     {
@@ -39,7 +39,7 @@
     {
       "type": "price_callout",
       "badge": "Vanaf",
-      "title": "Vanaf €200",
+      "title": "Vanaf €350",
       "text": "De definitieve prijs hangt af van het aantal pagina’s en uw wensen; u ontvangt altijd eerst een offerte."
     },
     {
