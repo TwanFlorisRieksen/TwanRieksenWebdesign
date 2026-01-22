@@ -65,6 +65,91 @@
     });
   }
 
+    function injectJsonLd(ctx, pageKey){
+    try{
+      const site = (ctx && ctx.site) ? ctx.site : {};
+      const seo = site.seo || {};
+      const brand = site.brand || {};
+      const contact = site.contact || {};
+      const url = seo.site_url || 'https://twanrieksenwebdesign.nl';
+      const name = seo.business_name || brand.name || 'Twan Rieksen Webdesign';
+      const email = seo.contact_email || contact.email || '';
+      const phone = seo.contact_phone || contact.phone || '';
+      const areaServed = seo.area_served || 'Netherlands';
+      const priceRange = seo.price_range || undefined;
+      const sameAs = Array.isArray(seo.same_as) ? seo.same_as.filter(Boolean) : [];
+
+      // ProfessionalService entity
+      const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": name,
+        "url": url,
+        ...(email ? {"email": email} : {}),
+        ...(phone ? {"telephone": phone} : {}),
+        ...(priceRange ? {"priceRange": priceRange} : {}),
+        "areaServed": {"@type":"Country","name": areaServed},
+        ...(sameAs.length ? {"sameAs": sameAs} : {})
+      };
+
+      // WebSite entity (basic)
+      const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": name,
+        "url": url
+      };
+
+      // Hergebruik bestaande jsonld-script als die er is, anders nieuw aanmaken
+      upsertJsonLd('jsonld-service', serviceSchema, 'script[data-meta="jsonld"]');
+      upsertJsonLd('jsonld-website', websiteSchema);
+
+      // FAQPage schema alleen op /diensten, gebaseerd op bestaande (zichtbare) FAQ data
+      if(pageKey === 'diensten'){
+        const page = ctx[pageKey] || {};
+        const faqs = Array.isArray(page.faq) ? page.faq : [];
+        const mainEntity = faqs
+          .filter(it => it && it.q && it.a)
+          .map(it => ({
+            "@type": "Question",
+            "name": String(it.q),
+            "acceptedAnswer": {"@type":"Answer","text": String(it.a)}
+          }));
+        if(mainEntity.length){
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity": mainEntity
+          };
+          upsertJsonLd('jsonld-faq', faqSchema);
+        }
+      }
+
+    }catch(e){
+      // Nooit de pagina blokkeren door JSON-LD
+      console && console.debug && console.debug('jsonld skipped', e);
+    }
+  }
+
+  function upsertJsonLd(id, obj, replaceSelector){
+    let el = document.getElementById(id);
+
+    if(!el && replaceSelector){
+      const existing = document.querySelector(replaceSelector);
+      if(existing && existing.tagName === 'SCRIPT' && existing.type === 'application/ld+json'){
+        el = existing;
+        el.id = id;
+      }
+    }
+
+    if(!el){
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(obj);
+  }
   function getByPath(obj, path){
     if(!path) return undefined;
     const parts = path.split('.');
@@ -746,6 +831,7 @@ async function buildSearchIndex(site, pages){
     ctx[key] = page;
 
     bindSimple(document, ctx);
+    injectJsonLd(ctx, key);
 
     const navLinks = renderNav(site);
     renderFooter(site);
