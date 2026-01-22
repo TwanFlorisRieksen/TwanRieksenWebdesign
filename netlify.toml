@@ -80,6 +80,55 @@
   from = "/bedankt/"
   to = "/bedankt.html"
   status = 200
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/diensten.html"
+  to = "/diensten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/werkwijze.html"
+  to = "/werkwijze"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projecten.html"
+  to = "/projecten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cookies.html"
+  to = "/cookies"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bedankt.html"
+  to = "/bedankt"
+  status = 301
+  force = true
+  
 [[headers]]
   for = "/*"
   [headers.values]
