@@ -322,10 +322,11 @@ img{max-width:100%;display:block}
 .hero-text{font-size:16px;color:rgba(15,23,42,.78);max-width:54ch}
 .hero-actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
 .hero-visual{display:flex;justify-content:flex-end}
-.hero-img{
-  width:min(420px, 100%);
-  filter: drop-shadow(0 26px 46px rgba(2,6,23,.12));
-  border-radius: var(--radius);
+.hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1536 / 1024;
+  object-fit: contain;
 }
 
 /* ---------------- Page hero ---------------- */
