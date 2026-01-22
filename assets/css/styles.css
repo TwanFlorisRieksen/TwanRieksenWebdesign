@@ -222,7 +222,24 @@ img{max-width:100%;display:block}
 }
 .icon{font-size:16px}
 
-.menu-btn{display:none;gap:0;border:0;background:transparent;cursor:pointer}
+.menu-btn{
+  display:none;
+  gap:0;
+  border:1px solid rgba(15,23,42,.12);
+  background:rgba(255,255,255,.92);
+  cursor:pointer;
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  place-items:center;
+  box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+.menu-btn:hover{
+  transform:translateY(-1px);
+  border-color:rgba(29,78,216,.22);
+  box-shadow:0 16px 30px rgba(29,78,216,.10);
+}
 .menu-lines{
   width:22px;
   height:2px;
@@ -230,6 +247,7 @@ img{max-width:100%;display:block}
   border-radius:999px;
   position:relative;
   display:inline-block;
+  transition: background .2s ease;
 }
 .menu-lines::before,
 .menu-lines::after{
@@ -240,9 +258,21 @@ img{max-width:100%;display:block}
   height:2px;
   background:rgba(15,23,42,.65);
   border-radius:999px;
+  transition: transform .25s ease, top .25s ease, opacity .2s ease;
 }
 .menu-lines::before{top:-7px}
 .menu-lines::after{top:7px}
+.menu-btn[aria-expanded="true"] .menu-lines{
+  background:transparent;
+}
+.menu-btn[aria-expanded="true"] .menu-lines::before{
+  top:0;
+  transform:rotate(45deg);
+}
+.menu-btn[aria-expanded="true"] .menu-lines::after{
+  top:0;
+  transform:rotate(-45deg);
+}
 
 /* ---------------- Buttons ---------------- */
 .btn{
@@ -567,7 +597,7 @@ kbd{
   .hero-visual{justify-content:flex-start}
   .project-grid{grid-template-columns: 1fr 1fr}
   .site-nav{display:none}
-  .menu-btn{display:inline-flex}
+  .menu-btn{display:grid}
   .brand{min-width:0}
 }
 
@@ -581,31 +611,88 @@ kbd{
 }
 
 /* ---------------- Mobile menu panel ---------------- */
+.mobile-nav-backdrop{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at 20% 10%, rgba(29,78,216,.08), rgba(15,23,42,.12) 45%, rgba(2,6,23,.45) 100%);
+  opacity:0;
+  pointer-events:none;
+  transition: opacity .25s ease;
+  z-index:40;
+}
+.mobile-nav-backdrop.open{
+  opacity:.8;
+  pointer-events:auto;
+}
 .mobile-nav{
   position:fixed;
   top:72px;
   left:0;
   right:0;
-  background: rgba(255,255,255,.97);
-  border-bottom:1px solid rgba(15,23,42,.10);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 50px rgba(2,6,23,.12);
-  padding:12px 16px;
-  display:none;
+  padding:12px 16px 18px;
+  opacity:0;
+  transform:translateY(-10px);
+  visibility:hidden;
+  pointer-events:none;
+  transition: opacity .28s ease, transform .28s ease, visibility 0s linear .28s;
+  z-index:45;
 }
-.mobile-nav.open{display:block}
+.mobile-nav.open{
+  opacity:1;
+  transform:translateY(0);
+  visibility:visible;
+  pointer-events:auto;
+  transition: opacity .28s ease, transform .28s ease;
+}
+.mobile-nav-inner{
+  max-width:520px;
+  margin:0 auto;
+  padding:14px;
+  border-radius:20px;
+  background:linear-gradient(160deg, rgba(255,255,255,.98), rgba(245,248,255,.94));
+  border:1px solid rgba(15,23,42,.10);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(2,6,23,.18);
+}
+.mobile-nav-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
 .mobile-nav a{
-  display:block;
-  padding:10px 12px;
-  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+  border-radius:16px;
   text-decoration:none;
   font-weight:800;
   color:rgba(15,23,42,.86);
   border:1px solid transparent;
+  background:rgba(255,255,255,.86);
+  box-shadow: 0 10px 20px rgba(2,6,23,.05);
+  opacity:0;
+  transform:translateY(6px);
+  transition: transform .35s ease, opacity .35s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  transition-delay: var(--delay, 0ms);
 }
-.mobile-nav a:hover{
-  background: rgba(29,78,216,.06);
-  border-color: rgba(29,78,216,.16);
+.mobile-nav.open a{
+  opacity:1;
+  transform:translateY(0);
+}
+.mobile-nav a[aria-current="page"]{
+  border-color: rgba(29,78,216,.25);
+  background: rgba(29,78,216,.08);
+  color:rgba(15,23,42,.95);
+}
+.mobile-nav a:hover,
+.mobile-nav a:focus-visible{
+  background: rgba(29,78,216,.10);
+  border-color: rgba(29,78,216,.28);
+  box-shadow: 0 18px 32px rgba(29,78,216,.12);
+}
+body.menu-open{
+  overflow:hidden;
 }
 
 /* =========================
