@@ -47,20 +47,29 @@
   }
 
   function setupMobileNav(navLinks){
-    // Create a simple mobile nav panel that uses the same links
+    // Create a mobile nav panel that uses the same links
     let panel = $('.mobile-nav');
     if(!panel){
       panel = document.createElement('div');
       panel.className = 'mobile-nav';
       document.body.appendChild(panel);
     }
-    panel.innerHTML = '';
-    navLinks.forEach(link=>{
+    let backdrop = $('.mobile-nav-backdrop');
+    if(!backdrop){
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-nav-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    panel.innerHTML = '<div class="mobile-nav-inner"><div class="mobile-nav-links"></div></div>';
+    const linksWrap = $('.mobile-nav-links', panel);
+    navLinks.forEach((link, index)=>{
       const a = document.createElement('a');
       a.href = link.href;
       a.textContent = link.label;
+      a.style.setProperty('--delay', `${index * 45}ms`);
       if(link.current) a.setAttribute('aria-current', 'page');
-      panel.appendChild(a);
+      linksWrap.appendChild(a);
     });
 
     const btn = $('[data-action="toggle-menu"]');
@@ -68,12 +77,16 @@
 
     const close = () => {
       panel.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.classList.remove('menu-open');
       btn.setAttribute('aria-expanded', 'false');
     };
 
     btn.addEventListener('click', ()=>{
       const open = !panel.classList.contains('open');
       panel.classList.toggle('open', open);
+      backdrop.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
       btn.setAttribute('aria-expanded', String(open));
     });
 
@@ -81,6 +94,7 @@
     panel.addEventListener('click', (e)=>{
       if(e.target && e.target.tagName === 'A') close();
     });
+    backdrop.addEventListener('click', close);
 
     // Close on scroll / resize
     window.addEventListener('resize', close, {passive:true});
