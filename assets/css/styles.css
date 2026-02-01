@@ -1056,3 +1056,140 @@ p + p{ margin-top: 10px; }
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+
+/* =========================================================
+   PREMIUM VISUAL DEPTH — LIGHT / DARK RHYTHM
+   (voegt leven toe zonder layout te breken)
+   ========================================================= */
+
+/* ---- Algemene section afwisseling ---- */
+.section:nth-of-type(even){
+  background:
+    linear-gradient(
+      180deg,
+      rgba(29,78,216,0.035),
+      rgba(255,255,255,0.95)
+    );
+}
+
+.section:nth-of-type(odd){
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.96),
+      rgba(255,255,255,0.98)
+    );
+}
+
+/* ---- Donkere premium zone (gebruik bijv. voor CTA of projecten) ---- */
+.section.dark-zone{
+  background:
+    radial-gradient(
+      800px 400px at 20% -20%,
+      rgba(29,78,216,0.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #0b1222,
+      #0f172a
+    );
+  color: #ffffff;
+}
+
+.section.dark-zone h1,
+.section.dark-zone h2,
+.section.dark-zone h3{
+  color: #ffffff;
+}
+
+.section.dark-zone p{
+  color: rgba(255,255,255,0.75);
+}
+
+/* ---- Cards krijgen meer diepte ---- */
+.card{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.96),
+      rgba(255,255,255,0.90)
+    );
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow:
+    0 10px 22px rgba(2,6,23,.06),
+    inset 0 1px 0 rgba(255,255,255,.5);
+}
+
+/* subtiele highlight bovenkant */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.35),
+      transparent 40%
+    );
+  opacity:.6;
+}
+
+/* ---- Accentlijnen (tech gevoel) ---- */
+.section::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(29,78,216,.18),
+    transparent
+  );
+  opacity:.6;
+}
+
+/* ---- CTA visueel sterker ---- */
+.cta-band{
+  background:
+    radial-gradient(
+      600px 300px at 20% -30%,
+      rgba(29,78,216,.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(29,78,216,.10),
+      rgba(255,255,255,.90)
+    );
+  border: 1px solid rgba(29,78,216,.25);
+}
+
+/* ---- Footer echt afsluiten ---- */
+.site-footer{
+  background:
+    radial-gradient(
+      900px 400px at 50% -20%,
+      rgba(29,78,216,.18),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #0f172a,
+      #0b1222
+    );
+  color: rgba(255,255,255,.78);
+}
+
+.site-footer a{
+  color: rgba(255,255,255,.85);
+}
+
+.site-footer a:hover{
+  color: #ffffff;
+}
