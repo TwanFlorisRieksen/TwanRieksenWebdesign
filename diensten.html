@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="block reveal section-open diensten-open full-band split-band split-right">
+<section class="block reveal section-open diensten-open">
   <div class="container">
     <h2 data-bind="diensten.expectations.title"></h2>
     <ul class="bullets" data-mount="diensten.expectations"></ul>
@@ -108,11 +108,9 @@
 
 <section class="section diensten-page">
   <div class="container">
-    <div class="section-open full-band split-band reveal">
-      <div class="split-content">
-        <h2 data-bind="diensten.offer.title"></h2>
-        <p class="lead" data-bind="diensten.offer.text"></p>
-      </div>
+    <div class="card large reveal">
+      <h2 data-bind="diensten.offer.title"></h2>
+      <p class="lead" data-bind="diensten.offer.text"></p>
     </div>
 
     <div class="grid two">
@@ -160,11 +158,9 @@
     </div>
 
     <div class="section-blue diensten-blue-wrap reveal full-band">
-      <div class="card reveal">
-  <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
-  <p class="muted" data-bind="diensten.pricing.note"></p>
-  <div data-mount="diensten.pricing"></div>
-      </div>
+      <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
+      <p class="muted" data-bind="diensten.pricing.note"></p>
+      <div data-mount="diensten.pricing"></div>
 
     <section class="cta-band reveal">
       <div class="cta-inner">

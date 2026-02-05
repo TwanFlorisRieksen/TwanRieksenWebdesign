@@ -1062,6 +1062,7 @@ p + p{ margin-top: 10px; }
 }
 
 .section-blue{
+  text-align:right;
   background: linear-gradient(180deg, rgba(29,78,216,.94), rgba(27,74,205,.94));
   border:1px solid rgba(255,255,255,.14);
   border-radius: var(--radius);
@@ -1072,7 +1073,7 @@ p + p{ margin-top: 10px; }
 .section-blue .card{background: rgba(255,255,255,.96);border-color: rgba(15,23,42,.08)}
 .section-blue .note-bar{background: rgba(255,255,255,.12);color:rgba(255,255,255,.95);border-color: rgba(255,255,255,.28)}
 .section-blue .badge{background: rgba(255,255,255,.18);border-color: rgba(255,255,255,.26);color:#fff}
-.section-blue .cta-band{margin-top:0;background: rgba(255,255,255,.08);border-color: rgba(255,255,255,.22);box-shadow:none}
+.section-blue .cta-band{margin-top:0;background: rgba(255,255,255,.08);border-color: rgba(255,255,255,.22);box-shadow:none;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end}
 .section-blue .btn.ghost{background: rgba(255,255,255,.16);border-color: rgba(255,255,255,.25);color:#fff}
 .section-blue .btn.primary{background:#fff;color:var(--blue);box-shadow:none}
 
@@ -1085,7 +1086,6 @@ p + p{ margin-top: 10px; }
 .diensten-blue-wrap{display:flex;flex-direction:column;gap:14px}
 
 .section-open{
-  background: rgba(246,247,251,.88);
   border-top:1px solid rgba(15,23,42,.08);
   border-bottom:1px solid rgba(15,23,42,.08);
   padding:14px 0;

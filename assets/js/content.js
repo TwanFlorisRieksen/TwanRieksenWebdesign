@@ -209,20 +209,18 @@
     host.innerHTML = '';
 
     const sections = page.sections || [];
+    let ctaCount = 0;
 
     for(let i = 0; i < sections.length; i += 1){
       const sec = sections[i];
       const wrap = document.createElement('div');
       wrap.className = 'block reveal home-block';
 
-      if(sec.type === 'feature_grid' && i === 0){
-        wrap.classList.add('section-open', 'home-align-right', 'full-band');
-      }
-      if(sec.type === 'feature_grid' && i > 0){
+      if(sec.type === 'feature_grid'){
         wrap.classList.add('section-card');
       }
       if(sec.type === 'testimonials'){
-        wrap.classList.add('section-open', 'full-band');
+        wrap.classList.add('section-card');
       }
 
       if(sec.type === 'feature_grid'){
@@ -292,7 +290,7 @@
       }
 
       if(sec.type === 'projects_teaser'){
-        wrap.classList.add('section-open', 'full-band');
+        wrap.classList.add('section-open');
         const h = document.createElement('h2');
         h.textContent = sec.title || '';
         wrap.appendChild(h);
@@ -356,18 +354,18 @@
       }
 
       if(sec.type === 'faq'){
-        wrap.classList.add('section-open', 'home-align-right', 'full-band');
-        const h = document.createElement('h2');
-        h.textContent = safeText(sec.title);
-        wrap.appendChild(h);
+        wrap.classList.add('section-card');
+        const c = document.createElement('div');
+        c.className = 'card reveal';
+        c.innerHTML = `<h3>${safeText(sec.title)}</h3>`;
         if(sec.subtitle){
           const p = document.createElement('p');
           p.className = 'muted';
           p.textContent = sec.subtitle;
-          wrap.appendChild(p);
+          c.appendChild(p);
         }
         const list = document.createElement('div');
-        list.className = 'faq faq-open';
+        list.className = 'faq';
         (sec.items||[]).forEach(it=>{
           const row = document.createElement('div');
           row.className = 'faq-item';
@@ -376,11 +374,17 @@
           row.querySelector('.a').textContent = it.a || '';
           list.appendChild(row);
         });
-        wrap.appendChild(list);
+        c.appendChild(list);
+        wrap.appendChild(c);
       }
 
       if(sec.type === 'cta'){
-        wrap.classList.add('section-blue', 'full-band');
+        ctaCount += 1;
+        if(ctaCount >= 2){
+          wrap.classList.add('section-blue', 'full-band');
+        } else {
+          wrap.classList.add('section-card');
+        }
         const band = document.createElement('section');
         band.className = 'cta-band reveal';
         band.innerHTML = `<div class="cta-inner"><h3></h3><p class="muted"></p></div>`;
