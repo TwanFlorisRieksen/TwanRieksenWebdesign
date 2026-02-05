@@ -518,6 +518,201 @@ img{max-width:100%;display:block}
   align-items:center;
   justify-content:flex-start;
   text-align:left;
+}
+
+.info-band-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-left:10px;
+}
+
+.info-band-content > * + *{margin-top:12px}
+
+.info-band.info-band-flow{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.info-band.info-band-flow .info-band-title{
+  justify-content:flex-start;
+  text-align:left;
+}
+
+.info-band.info-band-flow .info-band-content{
+  display:block;
+  padding-left:24px;
+}
+
+.info-band .muted,
+.info-band p,
+.info-band .faq-item .a,
+.info-band .project-text,
+.info-band .addon-item .text,
+.info-band .small-link{
+  color:rgba(255,255,255,.88);
+}
+
+.info-band .small-link{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.info-band .btn.ghost{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.38);
+  color:#fff;
+}
+
+.info-band .btn.ghost:hover{
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.55);
+}
+
+.info-band .addon-item,
+.info-band .faq-item,
+.info-band .badge{
+  border-color: rgba(255,255,255,.24);
+}
+
+.info-band .addon-item,
+.info-band .badge,
+.info-band .faq-item{
+  background: rgba(255,255,255,.08);
+}
+
+.info-band .addon-item .price,
+.info-band .faq-item .q,
+.info-band .addon-item .name{
+  color:#fff;
+}
+
+.info-band .faq-item{padding:10px}
+.info-band .faq-item:first-child{padding-top:10px}
+
+.info-band .bullets,
+.info-band .steps-list,
+.info-band .lead,
+.info-band label,
+.info-band span,
+.info-band input,
+.info-band textarea,
+.info-band .field-error,
+.info-band .price-desc,
+.info-band .price-option-text,
+.info-band .scroll-hint{
+  color:rgba(255,255,255,.92);
+}
+
+.info-band input,
+.info-band textarea{
+  background: rgba(255,255,255,.96);
+  color: var(--text);
+}
+
+.info-band .price-row,
+.info-band .price-option,
+.info-band .note-bar{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+  color:#fff;
+}
+
+.info-band .price-option:hover{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.45);
+}
+
+.info-band .price-option-price,
+.info-band .price-amount{
+  color:#fff;
+}
+
+/* Wissel af: na een blauwe band wordt de volgende band wit */
+.info-band + .info-band{
+  background: rgba(255,255,255,.94);
+  color: var(--text);
+  border-color: rgba(15,23,42,.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-band + .info-band .muted,
+.info-band + .info-band p,
+.info-band + .info-band .faq-item .a,
+.info-band + .info-band .project-text,
+.info-band + .info-band .addon-item .text,
+.info-band + .info-band .small-link,
+.info-band + .info-band .bullets,
+.info-band + .info-band .steps-list,
+.info-band + .info-band .lead,
+.info-band + .info-band label,
+.info-band + .info-band span,
+.info-band + .info-band .field-error,
+.info-band + .info-band .price-desc,
+.info-band + .info-band .price-option-text,
+.info-band + .info-band .scroll-hint{
+  color: rgba(15,23,42,.78);
+}
+
+.info-band + .info-band .addon-item,
+.info-band + .info-band .faq-item,
+.info-band + .info-band .badge,
+.info-band + .info-band .price-row,
+.info-band + .info-band .price-option,
+.info-band + .info-band .note-bar{
+  background: rgba(29,78,216,.06);
+  border-color: rgba(29,78,216,.20);
+  color: var(--text);
+}
+
+.info-band + .info-band .addon-item .price,
+.info-band + .info-band .faq-item .q,
+.info-band + .info-band .addon-item .name,
+.info-band + .info-band .price-option-price,
+.info-band + .info-band .price-amount{
+  color: var(--blue);
+}
+
+.info-band + .info-band .btn.ghost{
+  background: rgba(255,255,255,.88);
+  border-color: rgba(15,23,42,.12);
+  color: var(--text);
+}
+
+.info-band-wide{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  border-radius:0;
+  border-left:0;
+  border-right:0;
+  padding:22px max(22px, calc((100vw - var(--container)) / 2 + 22px));
+}
+
+.info-band-wide + .info-band-wide{margin-top:12px}
+
+/* ---------------- Content bands ---------------- */
+.info-band{
+  border-radius: var(--radius);
+  border:1px solid rgba(29,78,216,.34);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1b3fae 100%);
+  color:#fff;
+  box-shadow: 0 18px 36px rgba(18, 52, 148, .30);
+  padding:18px;
+  display:grid;
+  grid-template-columns: minmax(160px, 280px) 1fr;
+  gap:18px;
+  align-items:stretch;
+}
+
+.info-band-title{
+  margin:0;
+  font-size:22px;
+  line-height:1.2;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  text-align:left;
   position:relative;
   overflow:visible;
 }
@@ -581,6 +776,14 @@ img{max-width:100%;display:block}
 }
 
 .info-band .btn.ghost:hover{
+  .info-band{grid-template-columns:1fr;gap:12px}
+  .info-band-content{padding-left:0}
+  .info-band.info-band-flow .info-band-content{padding-left:0}
+  .info-band-wide{
+    padding:16px 22px;
+    margin-left:calc(50% - 50vw);
+  }
+  .info-band-title{font-size:20px}
   background: rgba(255,255,255,.22);
   border-color: rgba(255,255,255,.55);
 }
@@ -1031,6 +1234,23 @@ body.menu-open{
   position: fixed;
   inset: 0;
   width: 100vw;
+
+/* Consistente afronding over de hele site */
+.card,
+.note-bar,
+.step,
+.addon-item,
+.price-row,
+.price-option,
+.search-hit,
+input,
+textarea,
+.icon-btn,
+.menu-btn,
+.site-nav a,
+.btn{
+  border-radius: var(--radius-sm);
+}
   height: 100vh;
   z-index: -1;            /* achter alles */
   pointer-events: none;   /* nooit klikken blokkeren */

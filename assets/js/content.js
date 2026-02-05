@@ -317,7 +317,8 @@
         c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"></div>`;
         const content = c.querySelector('.info-band-content');
         if(sec.subtitle && content){
-          const p = document.createElement('p');
+          content.appendChild(p);
+        if(content) content.appendChild(list);
           p.className = 'muted';
           p.textContent = sec.subtitle;
           content.appendChild(p);
@@ -605,7 +606,7 @@ function mountWerkwijze(page){
           <div class="badge"></div>
           <h3 class="project-title"></h3>
           <p class="project-text"></p>
-          <div class="project-context" data-slot="project-context"></div>
+function mountContact(page){
           <a class="small-link" target="_blank" rel="noopener noreferrer"></a>
         </div>
       `;
@@ -670,18 +671,21 @@ function mountContact(page){
       r.innerHTML = '';
       (page.form?.reassurance||[]).forEach(t=>{
         const li = document.createElement('li');
-        li.textContent = t;
-        r.appendChild(li);
-      });
-    }
+}
+      const band = document.createElement('section');
+      band.className = 'info-band reveal';
+      const title = document.createElement('h3');
+      title.className = 'info-band-title';
+      title.textContent = sec.title || 'Onderdeel';
+      band.appendChild(title);
 
-    // Privacy note with link (optional)
-    const pn = document.querySelector('[data-mount="contact.form.privacy_note"]');
-    if(pn){
-      pn.innerHTML = '';
-      const note = page.form?.privacy_note;
-      if(note){
-        const span = document.createElement('span');
+      const content = document.createElement('div');
+      content.className = 'info-band-content';
+        content.appendChild(p);
+        content.appendChild(ul);
+      band.appendChild(content);
+
+      sectionsHost.appendChild(band);
         span.textContent = (note.text||'').toString().trim();
         pn.appendChild(span);
         const href = (note.link_href||'').toString().trim();
