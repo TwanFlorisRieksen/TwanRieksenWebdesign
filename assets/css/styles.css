@@ -518,6 +518,16 @@ img{max-width:100%;display:block}
   align-items:center;
   justify-content:center;
   text-align:center;
+  gap:12px;
+}
+
+.info-band-title::after{
+  content:"";
+  flex:1;
+  min-width:72px;
+  height:1px;
+  background: rgba(255,255,255,.28);
+  transform: translateY(1px);
 }
 
 .info-band-content{
@@ -633,6 +643,10 @@ img{max-width:100%;display:block}
   color: var(--text);
   border-color: rgba(15,23,42,.12);
   box-shadow: var(--shadow-sm);
+}
+
+.info-band + .info-band .info-band-title::after{
+  background: rgba(29,78,216,.24);
 }
 
 .info-band + .info-band .muted,
