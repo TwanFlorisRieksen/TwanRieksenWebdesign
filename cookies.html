@@ -90,16 +90,19 @@
 
     <section class="section">
       <div class="container">
+        <section class="section-open full-band split-band reveal">
+          <div class="split-content">
+            <p class="muted" data-bind="cookies.intro"></p>
+          </div>
+        </section>
+
         <div class="stack" data-mount="cookies.sections"></div>
-        <div class="card reveal">
-          <p class="muted" data-bind="cookies.intro"></p>
-        </div>
 
-        <div class="stack" data-mount="cookies.sections">
-          <!-- sections rendered by JS -->
-        </div>
-
-        <div class="note-bar small reveal" data-bind="cookies.last_updated"></div>
+        <section class="section-blue full-band split-band split-right reveal">
+          <div class="split-content">
+            <p class="muted" data-bind="cookies.last_updated"></p>
+          </div>
+        </section>
       </div>
     </section>
   </main>

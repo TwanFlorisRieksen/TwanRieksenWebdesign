@@ -216,13 +216,13 @@
       wrap.className = 'block reveal home-block';
 
       if(sec.type === 'feature_grid' && i === 0){
-        wrap.classList.add('section-open', 'home-align-right');
+        wrap.classList.add('section-open', 'home-align-right', 'full-band');
       }
       if(sec.type === 'feature_grid' && i > 0){
         wrap.classList.add('section-card');
       }
       if(sec.type === 'testimonials'){
-        wrap.classList.add('section-open');
+        wrap.classList.add('section-open', 'full-band');
       }
 
       if(sec.type === 'feature_grid'){
@@ -249,7 +249,7 @@
       }
 
       if(sec.type === 'price_callout'){
-        wrap.classList.add('section-blue', 'home-chapter');
+        wrap.classList.add('section-blue', 'home-chapter', 'full-band');
         const chapter = document.createElement('div');
         chapter.className = 'home-chapter-inner';
 
@@ -262,7 +262,7 @@
         const next = sections[i + 1];
         if(next && next.type === 'process_teaser'){
           const c = document.createElement('div');
-          c.className = 'card reveal chapter-process';
+          c.className = 'chapter-process reveal';
           const steps = (next.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
           c.innerHTML = `<h3>${safeText(next.title)}</h3><p class="muted">${safeText(next.text||'')}</p><div class="chapter-step-row">${steps}</div>`;
           const a = document.createElement('a');
@@ -292,7 +292,7 @@
       }
 
       if(sec.type === 'projects_teaser'){
-        wrap.classList.add('section-open');
+        wrap.classList.add('section-open', 'full-band');
         const h = document.createElement('h2');
         h.textContent = sec.title || '';
         wrap.appendChild(h);
@@ -356,7 +356,7 @@
       }
 
       if(sec.type === 'faq'){
-        wrap.classList.add('section-open', 'home-align-right');
+        wrap.classList.add('section-open', 'home-align-right', 'full-band');
         const h = document.createElement('h2');
         h.textContent = safeText(sec.title);
         wrap.appendChild(h);
@@ -380,7 +380,7 @@
       }
 
       if(sec.type === 'cta'){
-        wrap.classList.add('section-blue');
+        wrap.classList.add('section-blue', 'full-band');
         const band = document.createElement('section');
         band.className = 'cta-band reveal';
         band.innerHTML = `<div class="cta-inner"><h3></h3><p class="muted"></p></div>`;
