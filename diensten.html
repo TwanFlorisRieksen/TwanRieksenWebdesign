@@ -97,70 +97,62 @@
   </div>
 </section>
 
-<section class="block reveal">
-  <div class="container">
-    <h2 data-bind="diensten.expectations.title"></h2>
-    <ul class="bullets" data-mount="diensten.expectations"></ul>
-  </div>
-</section>
-
-
-
 <section class="section">
   <div class="container">
-    <div class="card large reveal">
-      <h2 data-bind="diensten.offer.title"></h2>
-      <p class="lead" data-bind="diensten.offer.text"></p>
-    </div>
-
-    <div class="grid two">
-      <div class="card reveal">
-  <h3>Wat u krijgt</h3>
-
-  <!-- bullets (maar 1x!) -->
-  <ul class="bullets" data-mount="diensten.deliverables"></ul>
-
-  <!-- CTA naar werkwijze (strak, geen note-bar, geen stippels) -->
-  <div class="card reveal" style="margin-top:14px; padding:14px">
-    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
-      <div style="min-width:220px; flex:1">
-        <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">
-          Benieuwd hoe ik te werk ga?
-        </div>
-
-        <p class="muted" style="margin:6px 0 0" data-bind="diensten.cta_werkwijze.text">
-          Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.
-        </p>
-
-        <!-- badges (LET OP: niet in <p> stoppen) -->
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
-          <span class="badge">Voorbeeldlink</span>
-          <span class="badge">Op uw naam</span>
-          <span class="badge">Geen technisch gedoe</span>
-        </div>
+    <section class="info-band info-band-flow reveal">
+      <h2 class="info-band-title" data-bind="diensten.expectations.title"></h2>
+      <div class="info-band-content">
+        <ul class="bullets" data-mount="diensten.expectations"></ul>
       </div>
-
-      <a class="btn ghost" href="werkwijze.html" data-bind="diensten.cta_werkwijze.button_label">
-        werkwijze
-      </a>
-    </div>
-  </div>
-</div>
-
-      <div class="card reveal addons-card">
-        <h3 data-bind="diensten.addons.title"></h3>
-        <p class="muted" data-bind="diensten.addons.note"></p>
-        <p class="muted scroll-hint" data-bind="diensten.addons.scroll_hint">
-  Tip: scroll in dit vak voor alle extra opties.
-</p>
-        <div class="addon-list" data-mount="diensten.addons.items"></div>
+    </section>
+    <section class="info-band info-band-flow reveal">
+      <h2 class="info-band-title" data-bind="diensten.offer.title"></h2>
+      <div class="info-band-content">
+        <p class="lead" data-bind="diensten.offer.text"></p>
       </div>
-    </div>
+    </section>
+    <section class="info-band info-band-wide reveal">
+        <h3 class="info-band-title">Wat u krijgt</h3>
+        <div class="info-band-content">
+          <ul class="bullets" data-mount="diensten.deliverables"></ul>
 
-    <div class="card reveal">
-  <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
-  <p class="muted" data-bind="diensten.pricing.note"></p>
-  <div data-mount="diensten.pricing"></div>
+          <div class="note-bar" style="margin-top:14px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
+              <div style="min-width:220px; flex:1">
+                <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">Benieuwd hoe ik te werk ga?</div>
+                <p class="muted" style="margin:6px 0 0" data-bind="diensten.cta_werkwijze.text">Bekijk de stappen. U ziet precies wat u kunt verwachten en wanneer alles op uw naam wordt gezet.</p>
+                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+                  <span class="badge">Voorbeeldlink</span>
+                  <span class="badge">Op uw naam</span>
+                  <span class="badge">Geen technisch gedoe</span>
+                </div>
+              </div>
+              <a class="btn ghost" href="werkwijze.html" data-bind="diensten.cta_werkwijze.button_label">werkwijze</a>
+            </div>
+          </div>
+      </section>
+
+      <section class="info-band info-band-flow reveal addons-card">
+        <h3 class="info-band-title" data-bind="diensten.addons.title"></h3>
+        <div class="info-band-content">
+          <p class="muted" data-bind="diensten.addons.note"></p>
+          <p class="muted scroll-hint" data-bind="diensten.addons.scroll_hint">Tip: scroll in dit vak voor alle extra opties.</p>
+          <div class="addon-list" data-mount="diensten.addons.items"></div>
+      </section>
+    <section class="info-band info-band-wide reveal">
+      <h3 class="info-band-title" data-bind="diensten.pricing.title">Prijsindicatie</h3>
+      <div class="info-band-content">
+        <p class="muted" data-bind="diensten.pricing.note"></p>
+        <div data-mount="diensten.pricing"></div>
+    </section>
+
+    <section class="info-band info-band-flow reveal">
+      <h3 class="info-band-title">Veelgestelde vragen</h3>
+      <div class="info-band-content">
+        <div class="faq" data-mount="diensten.faq"></div>
+      </div>
+    </section>
+    </section>
 
     <section class="cta-band reveal">
       <div class="cta-inner">
@@ -170,12 +162,12 @@
       <a class="btn primary" data-bind="diensten.cta_mid.button_label" data-bind-href="diensten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
     </section>
 
-</div>
-
-    <div class="card reveal">
-      <h3>Veelgestelde vragen</h3>
-      <div class="faq" data-mount="diensten.faq"></div>
-    </div>
+    <section class="info-band info-band-flow reveal">
+      <h3 class="info-band-title">Veelgestelde vragen</h3>
+      <div class="info-band-content">
+        <div class="faq" data-mount="diensten.faq"></div>
+      </div>
+    </section>
 
     <section class="cta-band reveal">
       <div class="cta-inner">

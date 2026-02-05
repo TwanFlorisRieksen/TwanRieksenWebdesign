@@ -244,22 +244,22 @@
       }
 
       if(sec.type === 'process_teaser'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
         const steps = (sec.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">${steps}</div>`;
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"><p class="muted">${safeText(sec.text||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">${steps}</div></div>`;
         const a = document.createElement('a');
         a.className = 'btn ghost';
         a.href = sec.button_href || 'werkwijze.html';
         a.textContent = sec.button_label || 'Bekijk werkwijze';
-        c.appendChild(a);
+        c.querySelector('.info-band-content').appendChild(a);
         wrap.appendChild(c);
       }
 
       if(sec.type === 'projects_teaser'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text)}</p>`;
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"><p class="muted">${safeText(sec.text)}</p></div>`;
         (sec.projects||[]).forEach(p=>{
           const row = document.createElement('div');
           row.className = 'addon-item';
@@ -273,7 +273,7 @@
           a.href = p.href || '#';
           a.textContent = p.link_label || 'Bekijk';
           linkWrap.appendChild(a);
-          c.appendChild(row);
+          c.querySelector('.info-band-content').appendChild(row);
         });
         wrap.appendChild(c);
       }
@@ -312,14 +312,16 @@
       }
 
       if(sec.type === 'faq'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3>`;
-        if(sec.subtitle){
-          const p = document.createElement('p');
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"></div>`;
+        const content = c.querySelector('.info-band-content');
+        if(sec.subtitle && content){
+          content.appendChild(p);
+        if(content) content.appendChild(list);
           p.className = 'muted';
           p.textContent = sec.subtitle;
-          c.appendChild(p);
+          content.appendChild(p);
         }
         const list = document.createElement('div');
         list.className = 'faq';
@@ -331,7 +333,7 @@
           row.querySelector('.a').textContent = it.a || '';
           list.appendChild(row);
         });
-        c.appendChild(list);
+        if(content) content.appendChild(list);
         wrap.appendChild(c);
       }
 
@@ -604,7 +606,7 @@ function mountWerkwijze(page){
           <div class="badge"></div>
           <h3 class="project-title"></h3>
           <p class="project-text"></p>
-          <div class="project-context" data-slot="project-context"></div>
+function mountContact(page){
           <a class="small-link" target="_blank" rel="noopener noreferrer"></a>
         </div>
       `;
@@ -630,7 +632,7 @@ function mountWerkwijze(page){
     });
   }
 
-  function mountContact(page){
+function mountContact(page){
     const steps = $('[data-mount="contact.after.steps"]');
     if(steps){
       steps.innerHTML = '';
@@ -669,18 +671,21 @@ function mountWerkwijze(page){
       r.innerHTML = '';
       (page.form?.reassurance||[]).forEach(t=>{
         const li = document.createElement('li');
-        li.textContent = t;
-        r.appendChild(li);
-      });
-    }
+}
+      const band = document.createElement('section');
+      band.className = 'info-band reveal';
+      const title = document.createElement('h3');
+      title.className = 'info-band-title';
+      title.textContent = sec.title || 'Onderdeel';
+      band.appendChild(title);
 
-    // Privacy note with link (optional)
-    const pn = document.querySelector('[data-mount="contact.form.privacy_note"]');
-    if(pn){
-      pn.innerHTML = '';
-      const note = page.form?.privacy_note;
-      if(note){
-        const span = document.createElement('span');
+      const content = document.createElement('div');
+      content.className = 'info-band-content';
+        content.appendChild(p);
+        content.appendChild(ul);
+      band.appendChild(content);
+
+      sectionsHost.appendChild(band);
         span.textContent = (note.text||'').toString().trim();
         pn.appendChild(span);
         const href = (note.link_href||'').toString().trim();
@@ -695,7 +700,7 @@ function mountWerkwijze(page){
         }
       }
     }
-  }
+}
 
 function mountLegal(page){
   // 1) NIEUW: sections renderer (privacy.sections / cookies.sections)
@@ -707,22 +712,23 @@ function mountLegal(page){
     sectionsHost.innerHTML = '';
 
     (page.sections || []).forEach(sec => {
-      const card = document.createElement('div');
-      card.className = 'card reveal';
+      const band = document.createElement('section');
+      band.className = 'info-band reveal';
 
-      // Titel
-      if(sec.title){
-        const h = document.createElement('h3');
-        h.textContent = sec.title;
-        card.appendChild(h);
-      }
+      const title = document.createElement('h3');
+      title.className = 'info-band-title';
+      title.textContent = sec.title || 'Onderdeel';
+      band.appendChild(title);
+
+      const content = document.createElement('div');
+      content.className = 'info-band-content';
 
       // Tekst
       if(sec.text){
         const p = document.createElement('p');
         p.className = 'muted';
         p.textContent = sec.text;
-        card.appendChild(p);
+        content.appendChild(p);
       }
 
       // Bullets
@@ -734,10 +740,12 @@ function mountLegal(page){
           li.textContent = b;
           ul.appendChild(li);
         });
-        card.appendChild(ul);
+        content.appendChild(ul);
       }
 
-      sectionsHost.appendChild(card);
+      band.appendChild(content);
+
+      sectionsHost.appendChild(band);
     });
 
     return; // klaar, niet doorgaan naar oude renderer
