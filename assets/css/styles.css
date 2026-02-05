@@ -528,6 +528,21 @@ img{max-width:100%;display:block}
 
 .info-band-content > * + *{margin-top:12px}
 
+.info-band.info-band-flow{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.info-band.info-band-flow .info-band-title{
+  justify-content:flex-start;
+  text-align:left;
+}
+
+.info-band.info-band-flow .info-band-content{
+  display:block;
+}
+
 .info-band .muted,
 .info-band p,
 .info-band .faq-item .a,
