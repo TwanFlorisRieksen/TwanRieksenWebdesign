@@ -103,22 +103,17 @@
     <div class="project-grid" data-mount="projecten.projects"></div>
 
 
-        <section class="cta-band reveal">
-          <div class="cta-inner">
-            <h3 data-bind="projecten.cta_mid.title"></h3>
-            <p class="muted" data-bind="projecten.cta_mid.text"></p>
-          </div>
-          <a class="btn primary" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
-        </section>
+    <div class="card reveal">
+      <h3 data-bind="projecten.cta_mid.title"></h3>
+      <p class="muted" data-bind="projecten.cta_mid.text"></p>
+      <p><a class="btn ghost" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a></p>
+    </div>
 
     <div class="card reveal">
-      
-        <div class="card reveal">
-          <h3 data-bind="projecten.extra.title"></h3>
-          <p class="muted" data-bind="projecten.extra.text"></p>
-          <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
-        </div>
-<h3 data-bind="projecten.highlights.title"></h3>
+      <h3 data-bind="projecten.extra.title"></h3>
+      <p class="muted" data-bind="projecten.extra.text"></p>
+      <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
+      <h3 data-bind="projecten.highlights.title"></h3>
       <ul class="bullets">
   <li data-bind="projecten.highlights.items.0"></li>
   <li data-bind="projecten.highlights.items.1"></li>

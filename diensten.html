@@ -120,8 +120,8 @@
   <!-- bullets (maar 1x!) -->
   <ul class="bullets" data-mount="diensten.deliverables"></ul>
 
-  <!-- CTA naar werkwijze (strak, geen note-bar, geen stippels) -->
-  <div class="card reveal" style="margin-top:14px; padding:14px">
+  <!-- CTA naar werkwijze -->
+  <div class="reveal" style="margin-top:14px; padding:14px; border:1px solid rgba(15,23,42,.08); border-radius:14px; background:rgba(255,255,255,.82)">
     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap">
       <div style="min-width:220px; flex:1">
         <div style="font-weight:700" data-bind="diensten.cta_werkwijze.title">
@@ -161,6 +161,7 @@
   <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
   <p class="muted" data-bind="diensten.pricing.note"></p>
   <div data-mount="diensten.pricing"></div>
+</div>
 
     <section class="cta-band reveal">
       <div class="cta-inner">
@@ -169,8 +170,6 @@
       </div>
       <a class="btn primary" data-bind="diensten.cta_mid.button_label" data-bind-href="diensten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
     </section>
-
-</div>
 
     <div class="card reveal">
       <h3>Veelgestelde vragen</h3>
