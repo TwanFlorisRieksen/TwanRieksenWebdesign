@@ -496,6 +496,63 @@ img{max-width:100%;display:block}
 .cta-inner h3{margin:0}
 .cta-inner p{margin:2px 0 0}
 
+/* ---------------- Content bands ---------------- */
+.info-band{
+  border-radius: var(--radius);
+  border:1px solid rgba(29,78,216,.34);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1b3fae 100%);
+  color:#fff;
+  box-shadow: 0 18px 36px rgba(18, 52, 148, .30);
+  padding:18px;
+  display:grid;
+  grid-template-columns: minmax(160px, 280px) 1fr;
+  gap:18px;
+  align-items:start;
+}
+
+.info-band-title{
+  margin:0;
+  font-size:22px;
+  line-height:1.2;
+}
+
+.info-band-content > * + *{margin-top:12px}
+
+.info-band .muted,
+.info-band p,
+.info-band .faq-item .a,
+.info-band .project-text,
+.info-band .addon-item .text,
+.info-band .small-link{
+  color:rgba(255,255,255,.88);
+}
+
+.info-band .small-link{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.info-band .addon-item,
+.info-band .faq-item,
+.info-band .badge{
+  border-color: rgba(255,255,255,.24);
+}
+
+.info-band .addon-item,
+.info-band .badge,
+.info-band .faq-item{
+  background: rgba(255,255,255,.08);
+}
+
+.info-band .addon-item .price,
+.info-band .faq-item .q,
+.info-band .addon-item .name{
+  color:#fff;
+}
+
+.info-band .faq-item{padding:10px}
+.info-band .faq-item:first-child{padding-top:10px}
+
 /* ---------------- Forms ---------------- */
 .form{display:flex;flex-direction:column;gap:12px;margin-top:10px}
 .field{display:flex;flex-direction:column;gap:6px}
@@ -606,6 +663,8 @@ kbd{
   .grid.two{grid-template-columns:1fr}
   .project-grid{grid-template-columns: 1fr}
   .cta-band{flex-direction:column;align-items:flex-start}
+  .info-band{grid-template-columns:1fr;gap:12px}
+  .info-band-title{font-size:20px}
   .footer-inner{flex-direction:column}
   .footer-copy{text-align:left}
 }

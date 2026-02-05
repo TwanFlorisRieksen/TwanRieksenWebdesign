@@ -244,22 +244,22 @@
       }
 
       if(sec.type === 'process_teaser'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
         const steps = (sec.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">${steps}</div>`;
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"><p class="muted">${safeText(sec.text||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">${steps}</div></div>`;
         const a = document.createElement('a');
         a.className = 'btn ghost';
         a.href = sec.button_href || 'werkwijze.html';
         a.textContent = sec.button_label || 'Bekijk werkwijze';
-        c.appendChild(a);
+        c.querySelector('.info-band-content').appendChild(a);
         wrap.appendChild(c);
       }
 
       if(sec.type === 'projects_teaser'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text)}</p>`;
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"><p class="muted">${safeText(sec.text)}</p></div>`;
         (sec.projects||[]).forEach(p=>{
           const row = document.createElement('div');
           row.className = 'addon-item';
@@ -273,7 +273,7 @@
           a.href = p.href || '#';
           a.textContent = p.link_label || 'Bekijk';
           linkWrap.appendChild(a);
-          c.appendChild(row);
+          c.querySelector('.info-band-content').appendChild(row);
         });
         wrap.appendChild(c);
       }
@@ -312,14 +312,15 @@
       }
 
       if(sec.type === 'faq'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3>`;
-        if(sec.subtitle){
+        const c = document.createElement('section');
+        c.className = 'info-band reveal';
+        c.innerHTML = `<h2 class="info-band-title">${safeText(sec.title)}</h2><div class="info-band-content"></div>`;
+        const content = c.querySelector('.info-band-content');
+        if(sec.subtitle && content){
           const p = document.createElement('p');
           p.className = 'muted';
           p.textContent = sec.subtitle;
-          c.appendChild(p);
+          content.appendChild(p);
         }
         const list = document.createElement('div');
         list.className = 'faq';
@@ -331,7 +332,7 @@
           row.querySelector('.a').textContent = it.a || '';
           list.appendChild(row);
         });
-        c.appendChild(list);
+        if(content) content.appendChild(list);
         wrap.appendChild(c);
       }
 
