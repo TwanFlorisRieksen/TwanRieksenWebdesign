@@ -236,11 +236,21 @@
       }
 
       if(sec.type === 'price_callout'){
-        const c = document.createElement('div');
-        c.className = 'note-bar reveal';
-        const badge = sec.badge ? `<span class="badge">${sec.badge}</span> ` : '';
-        c.innerHTML = `${badge}<strong>${safeText(sec.title)}</strong> — ${safeText(sec.text)}`;
-        wrap.appendChild(c);
+        const band = document.createElement('section');
+        band.className = 'section-band reveal';
+        band.innerHTML = '<div class="container"><h2 class="band-title"></h2><div class="band-body"><p></p></div></div>';
+        const titleEl = band.querySelector('.band-title');
+        const bodyEl = band.querySelector('.band-body p');
+        titleEl.textContent = sec.title || '';
+        bodyEl.textContent = sec.text || '';
+        if(sec.badge){
+          const badge = document.createElement('span');
+          badge.className = 'badge';
+          badge.textContent = sec.badge;
+          titleEl.prepend(badge);
+          titleEl.prepend(document.createTextNode(' '));
+        }
+        wrap.appendChild(band);
       }
 
       if(sec.type === 'process_teaser'){
@@ -337,7 +347,7 @@
 
       if(sec.type === 'cta'){
         const band = document.createElement('section');
-        band.className = 'cta-band reveal';
+        band.className = 'cta-box reveal';
         band.innerHTML = `<div class="cta-inner"><h3></h3><p class="muted"></p></div>`;
         band.querySelector('h3').textContent = sec.title || '';
         band.querySelector('p').textContent = sec.text || '';

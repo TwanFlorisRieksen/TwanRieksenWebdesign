@@ -81,23 +81,25 @@
   </div>
 
   <main id="main" class="site-main">
-    <section class="page-hero">
+    <section class="page-hero section-open section-open--soft">
       <div class="container">
         <h1 data-bind="privacy.page.title"></h1>
         <p class="lead" data-bind="privacy.page.subtitle"></p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-band reveal">
+      <div class="container">
+        <h2 class="band-title" data-bind="privacy.page.title"></h2>
+        <div class="band-body">
+          <p data-bind="privacy.intro"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cards">
       <div class="container">
         <div class="stack" data-mount="privacy.sections"></div>
-        <div class="card reveal">
-          <p class="muted" data-bind="privacy.intro"></p>
-        </div>
-
-        <div class="stack" data-mount="privacy.sections">
-          <!-- sections rendered by JS -->
-        </div>
 
         <div class="note-bar small reveal" data-bind="privacy.last_updated"></div>
       </div>

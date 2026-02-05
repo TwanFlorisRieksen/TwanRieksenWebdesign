@@ -368,6 +368,52 @@ img{max-width:100%;display:block}
 
 .section{padding:18px 0 18px}
 
+.section-open{
+  padding:22px 0;
+}
+
+.section-open .container{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:flex-start;
+  text-align:left;
+  border-top:1px solid #0f172a;
+  padding-top:18px;
+}
+
+.section-open.section-open--soft .container{
+  border-top:0;
+  padding-top:0;
+}
+
+.section-cards{padding:18px 0}
+
+.section-band{
+  width:100%;
+  padding:28px 0;
+  color:#ffffff;
+  background:linear-gradient(180deg, #0f172a 0%, #0d1527 100%);
+}
+
+.section-band .container{
+  display:grid;
+  grid-template-columns:minmax(220px, 1fr) minmax(280px, 1.25fr);
+  gap:28px;
+  align-items:start;
+}
+
+.section-band h2,
+.section-band h3,
+.section-band p,
+.section-band li{color:#ffffff}
+
+.section-band .band-title{margin:0;text-align:left}
+.section-band .band-body{text-align:left}
+.section-band .band-body p,
+.section-band .band-body ul,
+.section-band .band-body ol{margin:0}
+
 /* ---------------- Layout helpers ---------------- */
 .grid.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .stack{display:flex;flex-direction:column;gap:16px}
@@ -481,7 +527,7 @@ img{max-width:100%;display:block}
 .project-text{margin:0 0 10px;color:rgba(15,23,42,.72)}
 
 /* ---------------- CTA band ---------------- */
-.cta-band{
+.cta-box{
   margin-top:18px;
   padding:16px;
   border-radius: var(--radius);
@@ -599,13 +645,15 @@ kbd{
   .site-nav{display:none}
   .menu-btn{display:grid}
   .brand{min-width:0}
+
+  .section-band .container{grid-template-columns:1fr;gap:12px}
 }
 
 @media (max-width: 640px){
   .hero-title{font-size:36px}
   .grid.two{grid-template-columns:1fr}
   .project-grid{grid-template-columns: 1fr}
-  .cta-band{flex-direction:column;align-items:flex-start}
+  .cta-box{flex-direction:column;align-items:flex-start}
   .footer-inner{flex-direction:column}
   .footer-copy{text-align:left}
 }
