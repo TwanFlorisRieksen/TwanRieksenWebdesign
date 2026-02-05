@@ -612,6 +612,17 @@ img{max-width:100%;display:block}
   color:#fff;
 }
 
+.info-band-wide{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  border-radius:0;
+  border-left:0;
+  border-right:0;
+  padding:22px max(22px, calc((100vw - var(--container)) / 2 + 22px));
+}
+
+.info-band-wide + .info-band-wide{margin-top:12px}
+
 /* ---------------- Forms ---------------- */
 .form{display:flex;flex-direction:column;gap:12px;margin-top:10px}
 .field{display:flex;flex-direction:column;gap:6px}
@@ -723,6 +734,10 @@ kbd{
   .project-grid{grid-template-columns: 1fr}
   .cta-band{flex-direction:column;align-items:flex-start}
   .info-band{grid-template-columns:1fr;gap:12px}
+  .info-band-wide{
+    padding:16px 22px;
+    margin-left:calc(50% - 50vw);
+  }
   .info-band-title{font-size:20px}
   .footer-inner{flex-direction:column}
   .footer-copy{text-align:left}

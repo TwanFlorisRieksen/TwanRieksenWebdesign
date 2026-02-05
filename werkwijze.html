@@ -101,41 +101,37 @@
     <section class="section">
       <div class="container">
 
-        <div class="grid two">
-          <div class="card large reveal">
+        <div class="card large reveal">
             <h2 data-bind="werkwijze.steps_title">Zo werkt het (simpel en duidelijk)</h2>
               <p class="muted" data-bind="werkwijze.steps_subtitle"></p>
               <div class="steps" data-mount="werkwijze.steps"></div>
-          </div>
-
-          <div class="stack">
-            <section class="info-band reveal">
-              <h3 class="info-band-title" data-bind="werkwijze.need.title"></h3>
-              <div class="info-band-content">
-                <ul class="bullets" data-mount="werkwijze.need.items"></ul>
-              </div>
-            </section>
-            <section class="info-band reveal">
-              <h3 class="info-band-title" data-bind="werkwijze.rules.title"></h3>
-              <div class="info-band-content">
-                <ul class="bullets" data-mount="werkwijze.rules.items"></ul>
-              </div>
-            </section>
-            
-            <section class="info-band reveal">
-              <h3 class="info-band-title" data-bind="werkwijze.extra.title"></h3>
-              <div class="info-band-content">
-                <ul class="bullets" data-mount="werkwijze.extra.items"></ul>
-              </div>
-            </section>
-            <section class="info-band reveal">
-              <h3 class="info-band-title" data-bind="werkwijze.platforms.title"></h3>
-              <div class="info-band-content">
-                <ul class="bullets" data-mount="werkwijze.platforms.items"></ul>
-              </div>
-            </section>
-          </div>
         </div>
+
+        <section class="info-band info-band-wide reveal">
+          <h3 class="info-band-title" data-bind="werkwijze.need.title"></h3>
+          <div class="info-band-content">
+            <ul class="bullets" data-mount="werkwijze.need.items"></ul>
+          </div>
+        </section>
+        <section class="info-band info-band-wide reveal">
+          <h3 class="info-band-title" data-bind="werkwijze.rules.title"></h3>
+          <div class="info-band-content">
+            <ul class="bullets" data-mount="werkwijze.rules.items"></ul>
+          </div>
+        </section>
+
+        <section class="info-band info-band-wide reveal">
+          <h3 class="info-band-title" data-bind="werkwijze.extra.title"></h3>
+          <div class="info-band-content">
+            <ul class="bullets" data-mount="werkwijze.extra.items"></ul>
+          </div>
+        </section>
+        <section class="info-band info-band-wide reveal">
+          <h3 class="info-band-title" data-bind="werkwijze.platforms.title"></h3>
+          <div class="info-band-content">
+            <ul class="bullets" data-mount="werkwijze.platforms.items"></ul>
+          </div>
+        </section>
         
         
         <section class="cta-band reveal">
