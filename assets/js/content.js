@@ -236,11 +236,20 @@
       }
 
       if(sec.type === 'price_callout'){
-        const c = document.createElement('div');
-        c.className = 'note-bar reveal';
-        const badge = sec.badge ? `<span class="badge">${sec.badge}</span> ` : '';
-        c.innerHTML = `${badge}<strong>${safeText(sec.title)}</strong> — ${safeText(sec.text)}`;
-        wrap.appendChild(c);
+        const band = document.createElement('section');
+        band.className = 'band-section reveal';
+
+        const title = document.createElement('h2');
+        title.className = 'band-title';
+        title.textContent = sec.badge ? `${safeText(sec.badge)} ${safeText(sec.title)}` : safeText(sec.title);
+
+        const body = document.createElement('p');
+        body.className = 'band-body';
+        body.textContent = safeText(sec.text);
+
+        band.appendChild(title);
+        band.appendChild(body);
+        wrap.appendChild(band);
       }
 
       if(sec.type === 'process_teaser'){
@@ -336,17 +345,17 @@
       }
 
       if(sec.type === 'cta'){
-        const band = document.createElement('section');
-        band.className = 'cta-band reveal';
-        band.innerHTML = `<div class="cta-inner"><h3></h3><p class="muted"></p></div>`;
-        band.querySelector('h3').textContent = sec.title || '';
-        band.querySelector('p').textContent = sec.text || '';
+        const open = document.createElement('div');
+        open.className = 'open-section reveal';
+        open.innerHTML = `<h3></h3><p class="muted"></p>`;
+        open.querySelector('h3').textContent = sec.title || '';
+        open.querySelector('p').textContent = sec.text || '';
         const a = document.createElement('a');
-        a.className = 'btn primary';
+        a.className = 'btn ghost';
         a.href = sec.button_href || 'contact.html';
         a.textContent = sec.button_label || 'Offerte aanvragen';
-        band.appendChild(a);
-        wrap.appendChild(band);
+        open.appendChild(a);
+        wrap.appendChild(open);
       }
 
       host.appendChild(wrap);

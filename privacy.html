@@ -91,15 +91,16 @@
     <section class="section">
       <div class="container">
         <div class="stack" data-mount="privacy.sections"></div>
-        <div class="card reveal">
-          <p class="muted" data-bind="privacy.intro"></p>
-        </div>
+        <section class="band-section reveal">
+          <h3 class="band-title" data-bind="privacy.page.title"></h3>
+          <p class="band-body" data-bind="privacy.intro"></p>
+        </section>
 
         <div class="stack" data-mount="privacy.sections">
           <!-- sections rendered by JS -->
         </div>
 
-        <div class="note-bar small reveal" data-bind="privacy.last_updated"></div>
+        <div class="open-section reveal"><p class="muted" data-bind="privacy.last_updated"></p></div>
       </div>
     </section>
   </main>

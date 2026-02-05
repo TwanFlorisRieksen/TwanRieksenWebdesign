@@ -109,24 +109,22 @@
       <p><a class="btn ghost" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a></p>
     </div>
 
-    <div class="card reveal">
-      <h3 data-bind="projecten.extra.title"></h3>
-      <p class="muted" data-bind="projecten.extra.text"></p>
+    <section class="band-section reveal">
+      <h3 class="band-title" data-bind="projecten.extra.title"></h3>
+      <p class="band-body" data-bind="projecten.extra.text"></p>
       <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
-      <h3 data-bind="projecten.highlights.title"></h3>
+      <h3 class="band-body" data-bind="projecten.highlights.title"></h3>
       <ul class="bullets">
   <li data-bind="projecten.highlights.items.0"></li>
   <li data-bind="projecten.highlights.items.1"></li>
   <li data-bind="projecten.highlights.items.2"></li>
   <li data-bind="projecten.highlights.items.3"></li>
 </ul>
-    </div>
+    </section>
 
-    <section class="cta-band reveal">
-      <div class="cta-inner">
-        <h3 data-bind="projecten.cta.title"></h3>
-        <p class="muted" data-bind="projecten.cta.text"></p>
-      </div>
+    <section class="open-section reveal">
+      <h3 data-bind="projecten.cta.title"></h3>
+      <p class="muted" data-bind="projecten.cta.text"></p>
       <a class="btn primary" data-bind="projecten.cta.button_label" href="contact.html">Naar contact</a>
     </section>
   </div>

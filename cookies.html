@@ -91,15 +91,16 @@
     <section class="section">
       <div class="container">
         <div class="stack" data-mount="cookies.sections"></div>
-        <div class="card reveal">
-          <p class="muted" data-bind="cookies.intro"></p>
-        </div>
+        <section class="band-section reveal">
+          <h3 class="band-title" data-bind="cookies.page.title"></h3>
+          <p class="band-body" data-bind="cookies.intro"></p>
+        </section>
 
         <div class="stack" data-mount="cookies.sections">
           <!-- sections rendered by JS -->
         </div>
 
-        <div class="note-bar small reveal" data-bind="cookies.last_updated"></div>
+        <div class="open-section reveal"><p class="muted" data-bind="cookies.last_updated"></p></div>
       </div>
     </section>
   </main>

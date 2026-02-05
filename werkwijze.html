@@ -113,10 +113,10 @@
               <h3 data-bind="werkwijze.need.title"></h3>
               <ul class="bullets" data-mount="werkwijze.need.items"></ul>
             </div>
-            <div class="card reveal">
-              <h3 data-bind="werkwijze.rules.title"></h3>
-              <ul class="bullets" data-mount="werkwijze.rules.items"></ul>
-            </div>
+            <section class="band-section reveal">
+              <h3 class="band-title" data-bind="werkwijze.rules.title"></h3>
+              <ul class="bullets band-body" data-mount="werkwijze.rules.items"></ul>
+            </section>
             
             <div class="card reveal">
               <h3 data-bind="werkwijze.extra.title"></h3>
@@ -130,13 +130,9 @@
         </div>
         
         
-        <section class="cta-band reveal">
-  <div class="cta-inner">
-    <h3 data-bind="werkwijze.cta.title"></h3>
-    <p class="muted" data-bind="werkwijze.cta.text"></p>
-  </div>
-
-  <!-- Buttons worden via content.js gerenderd -->
+        <section class="open-section reveal">
+  <h3 data-bind="werkwijze.cta.title"></h3>
+  <p class="muted" data-bind="werkwijze.cta.text"></p>
   <div class="cta-actions" data-mount="werkwijze.cta.buttons"></div>
 </section>
 
