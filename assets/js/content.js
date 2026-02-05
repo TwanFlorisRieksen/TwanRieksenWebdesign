@@ -208,12 +208,25 @@
     if(!host) return;
     host.innerHTML = '';
 
-    (page.sections||[]).forEach(sec=>{
+    const sections = page.sections || [];
+    for(let i = 0; i < sections.length; i++){
+      const sec = sections[i];
       const wrap = document.createElement('div');
-      wrap.className = 'block reveal';
+      wrap.className = 'block reveal section-shell';
+
+      if(sec.type === 'feature_grid' || sec.type === 'testimonials'){
+        wrap.classList.add('section-shell--open');
+      }else if(sec.type === 'price_callout' || sec.type === 'cta'){
+        wrap.classList.add('section-shell--blue');
+      }else{
+        wrap.classList.add('section-shell--card');
+      }
+
+      if(i % 2 === 1) wrap.classList.add('section-shell--reverse');
 
       if(sec.type === 'feature_grid'){
         const h = document.createElement('h2');
+        h.className = 'section-title';
         h.textContent = sec.title || '';
         wrap.appendChild(h);
         if(sec.subtitle){
@@ -237,10 +250,25 @@
 
       if(sec.type === 'price_callout'){
         const c = document.createElement('div');
-        c.className = 'note-bar reveal';
+        c.className = 'note-bar reveal section-price';
         const badge = sec.badge ? `<span class="badge">${sec.badge}</span> ` : '';
         c.innerHTML = `${badge}<strong>${safeText(sec.title)}</strong> — ${safeText(sec.text)}`;
         wrap.appendChild(c);
+
+        const next = sections[i + 1];
+        if(next && next.type === 'process_teaser'){
+          const process = document.createElement('div');
+          process.className = 'section-process';
+          const steps = (next.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
+          process.innerHTML = `<h3>${safeText(next.title)}</h3><p class="muted">${safeText(next.text||'')}</p><div class="section-process-steps">${steps}</div>`;
+          const a = document.createElement('a');
+          a.className = 'btn ghost';
+          a.href = next.button_href || 'werkwijze.html';
+          a.textContent = next.button_label || 'Bekijk werkwijze';
+          process.appendChild(a);
+          wrap.appendChild(process);
+          i++;
+        }
       }
 
       if(sec.type === 'process_teaser'){
@@ -280,6 +308,7 @@
 
       if(sec.type === 'testimonials'){
         const h = document.createElement('h2');
+        h.className = 'section-title';
         h.textContent = sec.title || '';
         wrap.appendChild(h);
         if(sec.subtitle){
@@ -350,7 +379,7 @@
       }
 
       host.appendChild(wrap);
-    });
+    }
   }
 
 function mountDiensten(page){
