@@ -99,32 +99,38 @@
 
 <section class="section">
   <div class="container">
-    <p class="muted reveal" data-bind="projecten.intro"></p>
+    <div class="section-open reveal">
+      <p class="muted" data-bind="projecten.intro"></p>
+    </div>
+
     <div class="project-grid" data-mount="projecten.projects"></div>
 
-
-        <section class="cta-band reveal">
-          <div class="cta-inner">
-            <h3 data-bind="projecten.cta_mid.title"></h3>
-            <p class="muted" data-bind="projecten.cta_mid.text"></p>
-          </div>
-          <a class="btn primary" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
-        </section>
-
-    <div class="card reveal">
-      
-        <div class="card reveal">
-          <h3 data-bind="projecten.extra.title"></h3>
-          <p class="muted" data-bind="projecten.extra.text"></p>
-          <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
+    <div class="section-blue reveal diensten-blue-wrap">
+      <section class="cta-band reveal">
+        <div class="cta-inner">
+          <h3 data-bind="projecten.cta_mid.title"></h3>
+          <p class="muted" data-bind="projecten.cta_mid.text"></p>
         </div>
-<h3 data-bind="projecten.highlights.title"></h3>
-      <ul class="bullets">
-  <li data-bind="projecten.highlights.items.0"></li>
-  <li data-bind="projecten.highlights.items.1"></li>
-  <li data-bind="projecten.highlights.items.2"></li>
-  <li data-bind="projecten.highlights.items.3"></li>
-</ul>
+        <a class="btn primary" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
+      </section>
+    </div>
+
+    <div class="grid two">
+      <div class="card reveal">
+        <h3 data-bind="projecten.extra.title"></h3>
+        <p class="muted" data-bind="projecten.extra.text"></p>
+        <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
+      </div>
+
+      <div class="card reveal">
+        <h3 data-bind="projecten.highlights.title"></h3>
+        <ul class="bullets">
+          <li data-bind="projecten.highlights.items.0"></li>
+          <li data-bind="projecten.highlights.items.1"></li>
+          <li data-bind="projecten.highlights.items.2"></li>
+          <li data-bind="projecten.highlights.items.3"></li>
+        </ul>
+      </div>
     </div>
 
     <section class="cta-band reveal">
@@ -136,6 +142,7 @@
     </section>
   </div>
 </section>
+
 
   </main>
 

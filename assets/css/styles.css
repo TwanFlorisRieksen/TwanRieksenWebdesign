@@ -360,6 +360,7 @@ img{max-width:100%;display:block}
 
 /* ---------------- Cards ---------------- */
 .card{
+  text-align:left;
   background: rgba(255,255,255,.92);
   border:1px solid rgba(15,23,42,.10);
   border-radius: var(--radius);
@@ -1061,7 +1062,7 @@ p + p{ margin-top: 10px; }
 }
 
 .section-blue{
-  background: linear-gradient(180deg, rgba(29,78,216,.96), rgba(24,68,188,.96));
+  background: linear-gradient(180deg, rgba(29,78,216,.94), rgba(27,74,205,.94));
   border:1px solid rgba(255,255,255,.14);
   border-radius: var(--radius);
   padding:14px;
@@ -1082,3 +1083,36 @@ p + p{ margin-top: 10px; }
 .diensten-open h2,
 .diensten-open p{max-width:62ch;margin-left:auto;text-align:right}
 .diensten-blue-wrap{display:flex;flex-direction:column;gap:14px}
+
+.section-open{
+  border-top:1px solid rgba(15,23,42,.08);
+  border-bottom:1px solid rgba(15,23,42,.08);
+  padding:14px 0;
+}
+.section-open .faq-open{
+  border:1px solid rgba(15,23,42,.10);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.78);
+  padding:12px 14px;
+}
+.section-open .addon-item{background: rgba(255,255,255,.72)}
+
+.section-blue > h2,
+.section-blue > p,
+.section-blue .cta-inner h3,
+.section-blue .cta-inner p{color:#fff}
+
+.section-blue .card,
+.section-blue .card h2,
+.section-blue .card h3,
+.section-blue .card p,
+.section-blue .card .muted,
+.section-blue .card .q,
+.section-blue .card .a{color:var(--text)}
+
+.section-blue .card .badge{
+  background: rgba(29,78,216,.10);
+  border-color: rgba(29,78,216,.18);
+  color: rgba(29,78,216,.95);
+}
+

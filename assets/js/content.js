@@ -224,9 +224,6 @@
       if(sec.type === 'testimonials'){
         wrap.classList.add('section-open');
       }
-      if(sec.type === 'projects_teaser' || sec.type === 'faq'){
-        wrap.classList.add('section-card');
-      }
 
       if(sec.type === 'feature_grid'){
         const h = document.createElement('h2');
@@ -295,9 +292,18 @@
       }
 
       if(sec.type === 'projects_teaser'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text)}</p>`;
+        wrap.classList.add('section-open');
+        const h = document.createElement('h2');
+        h.textContent = sec.title || '';
+        wrap.appendChild(h);
+
+        const intro = document.createElement('p');
+        intro.className = 'muted';
+        intro.textContent = sec.text || '';
+        wrap.appendChild(intro);
+
+        const list = document.createElement('div');
+        list.className = 'stack';
         (sec.projects||[]).forEach(p=>{
           const row = document.createElement('div');
           row.className = 'addon-item';
@@ -311,9 +317,9 @@
           a.href = p.href || '#';
           a.textContent = p.link_label || 'Bekijk';
           linkWrap.appendChild(a);
-          c.appendChild(row);
+          list.appendChild(row);
         });
-        wrap.appendChild(c);
+        wrap.appendChild(list);
       }
 
       if(sec.type === 'testimonials'){
@@ -350,17 +356,18 @@
       }
 
       if(sec.type === 'faq'){
-        const c = document.createElement('div');
-        c.className = 'card reveal';
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3>`;
+        wrap.classList.add('section-open', 'home-align-right');
+        const h = document.createElement('h2');
+        h.textContent = safeText(sec.title);
+        wrap.appendChild(h);
         if(sec.subtitle){
           const p = document.createElement('p');
           p.className = 'muted';
           p.textContent = sec.subtitle;
-          c.appendChild(p);
+          wrap.appendChild(p);
         }
         const list = document.createElement('div');
-        list.className = 'faq';
+        list.className = 'faq faq-open';
         (sec.items||[]).forEach(it=>{
           const row = document.createElement('div');
           row.className = 'faq-item';
@@ -369,8 +376,7 @@
           row.querySelector('.a').textContent = it.a || '';
           list.appendChild(row);
         });
-        c.appendChild(list);
-        wrap.appendChild(c);
+        wrap.appendChild(list);
       }
 
       if(sec.type === 'cta'){
