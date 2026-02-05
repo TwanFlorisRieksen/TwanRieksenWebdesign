@@ -7,7 +7,7 @@
   --shadow: 0 10px 30px rgba(2, 6, 23, .08);
   --shadow-sm: 0 6px 16px rgba(2, 6, 23, .06);
   --radius: 18px;
-  --radius-sm: 14px;
+  --radius-sm: 18px;
   --blue: #1d4ed8; /* koningsblauw */
   --blue-2: rgba(29, 78, 216, .12);
   --focus: rgba(29, 78, 216, .35);
@@ -507,13 +507,23 @@ img{max-width:100%;display:block}
   display:grid;
   grid-template-columns: minmax(160px, 280px) 1fr;
   gap:18px;
-  align-items:start;
+  align-items:stretch;
 }
 
 .info-band-title{
   margin:0;
   font-size:22px;
   line-height:1.2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.info-band-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .info-band-content > * + *{margin-top:12px}
@@ -530,6 +540,17 @@ img{max-width:100%;display:block}
 .info-band .small-link{
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.info-band .btn.ghost{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.38);
+  color:#fff;
+}
+
+.info-band .btn.ghost:hover{
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.55);
 }
 
 .info-band .addon-item,
@@ -552,6 +573,44 @@ img{max-width:100%;display:block}
 
 .info-band .faq-item{padding:10px}
 .info-band .faq-item:first-child{padding-top:10px}
+
+.info-band .bullets,
+.info-band .steps-list,
+.info-band .lead,
+.info-band label,
+.info-band span,
+.info-band input,
+.info-band textarea,
+.info-band .field-error,
+.info-band .price-desc,
+.info-band .price-option-text,
+.info-band .scroll-hint{
+  color:rgba(255,255,255,.92);
+}
+
+.info-band input,
+.info-band textarea{
+  background: rgba(255,255,255,.96);
+  color: var(--text);
+}
+
+.info-band .price-row,
+.info-band .price-option,
+.info-band .note-bar{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+  color:#fff;
+}
+
+.info-band .price-option:hover{
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.45);
+}
+
+.info-band .price-option-price,
+.info-band .price-amount{
+  color:#fff;
+}
 
 /* ---------------- Forms ---------------- */
 .form{display:flex;flex-direction:column;gap:12px;margin-top:10px}
@@ -1114,4 +1173,21 @@ p + p{ margin-top: 10px; }
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+/* Consistente afronding over de hele site */
+.card,
+.note-bar,
+.step,
+.addon-item,
+.price-row,
+.price-option,
+.search-hit,
+input,
+textarea,
+.icon-btn,
+.menu-btn,
+.site-nav a,
+.btn{
+  border-radius: var(--radius-sm);
 }

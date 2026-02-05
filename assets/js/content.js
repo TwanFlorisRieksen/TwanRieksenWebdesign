@@ -631,7 +631,7 @@ function mountWerkwijze(page){
     });
   }
 
-  function mountContact(page){
+function mountContact(page){
     const steps = $('[data-mount="contact.after.steps"]');
     if(steps){
       steps.innerHTML = '';
@@ -696,7 +696,7 @@ function mountWerkwijze(page){
         }
       }
     }
-  }
+}
 
 function mountLegal(page){
   // 1) NIEUW: sections renderer (privacy.sections / cookies.sections)
@@ -708,22 +708,23 @@ function mountLegal(page){
     sectionsHost.innerHTML = '';
 
     (page.sections || []).forEach(sec => {
-      const card = document.createElement('div');
-      card.className = 'card reveal';
+      const band = document.createElement('section');
+      band.className = 'info-band reveal';
 
-      // Titel
-      if(sec.title){
-        const h = document.createElement('h3');
-        h.textContent = sec.title;
-        card.appendChild(h);
-      }
+      const title = document.createElement('h3');
+      title.className = 'info-band-title';
+      title.textContent = sec.title || 'Onderdeel';
+      band.appendChild(title);
+
+      const content = document.createElement('div');
+      content.className = 'info-band-content';
 
       // Tekst
       if(sec.text){
         const p = document.createElement('p');
         p.className = 'muted';
         p.textContent = sec.text;
-        card.appendChild(p);
+        content.appendChild(p);
       }
 
       // Bullets
@@ -735,10 +736,12 @@ function mountLegal(page){
           li.textContent = b;
           ul.appendChild(li);
         });
-        card.appendChild(ul);
+        content.appendChild(ul);
       }
 
-      sectionsHost.appendChild(card);
+      band.appendChild(content);
+
+      sectionsHost.appendChild(band);
     });
 
     return; // klaar, niet doorgaan naar oude renderer

@@ -100,8 +100,9 @@
 <section class="section">
   <div class="container">
     <div class="grid two">
-      <div class="card reveal">
-        <h2 data-bind="contact.form.title"></h2>
+      <section class="info-band reveal">
+        <h2 class="info-band-title" data-bind="contact.form.title"></h2>
+        <div class="info-band-content">
         <p class="muted" data-bind="contact.form.hint"></p>
 
         <form name="offerte" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" id="contact-form" novalidate>
@@ -134,18 +135,24 @@
           <p class="muted small" data-mount="contact.form.privacy_note"></p>
           <p class="muted small">Na verzending krijgt u een bevestiging.</p>
         </form>
-      </div>
+        </div>
+      </section>
 
       <div class="stack">
-        <div class="card reveal">
-          <h3 data-bind="contact.after.title"></h3>
-          <ol class="steps-list" data-mount="contact.after.steps"></ol>
-          <div class="note-bar small reveal" data-bind="contact.after.note"></div>
-        </div>
+        <section class="info-band reveal">
+          <h3 class="info-band-title" data-bind="contact.after.title"></h3>
+          <div class="info-band-content">
+            <ol class="steps-list" data-mount="contact.after.steps"></ol>
+            <div class="note-bar small reveal" data-bind="contact.after.note"></div>
+          </div>
+        </section>
 
-        <div class="card reveal">
-          <div data-mount="contact.cards"></div>
-        </div>
+        <section class="info-band reveal">
+          <h3 class="info-band-title">Contactgegevens</h3>
+          <div class="info-band-content">
+            <div data-mount="contact.cards"></div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

@@ -111,21 +111,25 @@
           <a class="btn primary" data-bind="projecten.cta_mid.button_label" data-bind-href="projecten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
         </section>
 
-    <div class="card reveal">
-      
-        <div class="card reveal">
-          <h3 data-bind="projecten.extra.title"></h3>
-          <p class="muted" data-bind="projecten.extra.text"></p>
-          <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
-        </div>
-<h3 data-bind="projecten.highlights.title"></h3>
-      <ul class="bullets">
-  <li data-bind="projecten.highlights.items.0"></li>
-  <li data-bind="projecten.highlights.items.1"></li>
-  <li data-bind="projecten.highlights.items.2"></li>
-  <li data-bind="projecten.highlights.items.3"></li>
-</ul>
-    </div>
+    <section class="info-band reveal">
+      <h3 class="info-band-title" data-bind="projecten.extra.title"></h3>
+      <div class="info-band-content">
+        <p class="muted" data-bind="projecten.extra.text"></p>
+        <ul class="bullets" data-mount="projecten.extra.bullets"></ul>
+      </div>
+    </section>
+
+    <section class="info-band reveal">
+      <h3 class="info-band-title" data-bind="projecten.highlights.title"></h3>
+      <div class="info-band-content">
+        <ul class="bullets">
+          <li data-bind="projecten.highlights.items.0"></li>
+          <li data-bind="projecten.highlights.items.1"></li>
+          <li data-bind="projecten.highlights.items.2"></li>
+          <li data-bind="projecten.highlights.items.3"></li>
+        </ul>
+      </div>
+    </section>
 
     <section class="cta-band reveal">
       <div class="cta-inner">
