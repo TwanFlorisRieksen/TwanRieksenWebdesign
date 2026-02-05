@@ -100,9 +100,8 @@
 <section class="section">
   <div class="container">
     <div class="grid two">
-      <section class="info-band reveal">
-        <h2 class="info-band-title" data-bind="contact.form.title"></h2>
-        <div class="info-band-content">
+      <div class="card reveal">
+        <h2 data-bind="contact.form.title"></h2>
         <p class="muted" data-bind="contact.form.hint"></p>
 
         <form name="offerte" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" id="contact-form" novalidate>
@@ -135,8 +134,7 @@
           <p class="muted small" data-mount="contact.form.privacy_note"></p>
           <p class="muted small">Na verzending krijgt u een bevestiging.</p>
         </form>
-        </div>
-      </section>
+      </div>
 
       <div class="stack">
         <section class="info-band reveal">
