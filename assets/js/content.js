@@ -208,9 +208,25 @@
     if(!host) return;
     host.innerHTML = '';
 
-    (page.sections||[]).forEach(sec=>{
+    const sections = page.sections || [];
+
+    for(let i = 0; i < sections.length; i += 1){
+      const sec = sections[i];
       const wrap = document.createElement('div');
-      wrap.className = 'block reveal';
+      wrap.className = 'block reveal home-block';
+
+      if(sec.type === 'feature_grid' && i === 0){
+        wrap.classList.add('section-open', 'home-align-right');
+      }
+      if(sec.type === 'feature_grid' && i > 0){
+        wrap.classList.add('section-card');
+      }
+      if(sec.type === 'testimonials'){
+        wrap.classList.add('section-open');
+      }
+      if(sec.type === 'projects_teaser' || sec.type === 'faq'){
+        wrap.classList.add('section-card');
+      }
 
       if(sec.type === 'feature_grid'){
         const h = document.createElement('h2');
@@ -236,18 +252,40 @@
       }
 
       if(sec.type === 'price_callout'){
-        const c = document.createElement('div');
-        c.className = 'note-bar reveal';
+        wrap.classList.add('section-blue', 'home-chapter');
+        const chapter = document.createElement('div');
+        chapter.className = 'home-chapter-inner';
+
+        const note = document.createElement('div');
+        note.className = 'note-bar reveal';
         const badge = sec.badge ? `<span class="badge">${sec.badge}</span> ` : '';
-        c.innerHTML = `${badge}<strong>${safeText(sec.title)}</strong> — ${safeText(sec.text)}`;
-        wrap.appendChild(c);
+        note.innerHTML = `${badge}<strong>${safeText(sec.title)}</strong> — ${safeText(sec.text)}`;
+        chapter.appendChild(note);
+
+        const next = sections[i + 1];
+        if(next && next.type === 'process_teaser'){
+          const c = document.createElement('div');
+          c.className = 'card reveal chapter-process';
+          const steps = (next.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
+          c.innerHTML = `<h3>${safeText(next.title)}</h3><p class="muted">${safeText(next.text||'')}</p><div class="chapter-step-row">${steps}</div>`;
+          const a = document.createElement('a');
+          a.className = 'btn ghost';
+          a.href = next.button_href || 'werkwijze.html';
+          a.textContent = next.button_label || 'Bekijk werkwijze';
+          c.appendChild(a);
+          chapter.appendChild(c);
+          i += 1;
+        }
+
+        wrap.appendChild(chapter);
       }
 
       if(sec.type === 'process_teaser'){
+        wrap.classList.add('section-card');
         const c = document.createElement('div');
         c.className = 'card reveal';
         const steps = (sec.steps||[]).map(s=>`<span class="badge">${safeText(s)}</span>`).join(' ');
-        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">${steps}</div>`;
+        c.innerHTML = `<h3>${safeText(sec.title)}</h3><p class="muted">${safeText(sec.text||'')}</p><div class="chapter-step-row">${steps}</div>`;
         const a = document.createElement('a');
         a.className = 'btn ghost';
         a.href = sec.button_href || 'werkwijze.html';
@@ -336,6 +374,7 @@
       }
 
       if(sec.type === 'cta'){
+        wrap.classList.add('section-blue');
         const band = document.createElement('section');
         band.className = 'cta-band reveal';
         band.innerHTML = `<div class="cta-inner"><h3></h3><p class="muted"></p></div>`;
@@ -350,7 +389,7 @@
       }
 
       host.appendChild(wrap);
-    });
+    }
   }
 
 function mountDiensten(page){

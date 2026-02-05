@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="block reveal">
+<section class="block reveal section-open diensten-open">
   <div class="container">
     <h2 data-bind="diensten.expectations.title"></h2>
     <ul class="bullets" data-mount="diensten.expectations"></ul>
@@ -106,7 +106,7 @@
 
 
 
-<section class="section">
+<section class="section diensten-page">
   <div class="container">
     <div class="card large reveal">
       <h2 data-bind="diensten.offer.title"></h2>
@@ -157,10 +157,12 @@
       </div>
     </div>
 
-    <div class="card reveal">
+    <div class="section-blue diensten-blue-wrap reveal">
+      <div class="card reveal">
   <h3 data-bind="diensten.pricing.title">Prijsindicatie</h3>
   <p class="muted" data-bind="diensten.pricing.note"></p>
   <div data-mount="diensten.pricing"></div>
+      </div>
 
     <section class="cta-band reveal">
       <div class="cta-inner">
@@ -170,13 +172,14 @@
       <a class="btn primary" data-bind="diensten.cta_mid.button_label" data-bind-href="diensten.cta_mid.button_href" href="werkwijze.html">Bekijk werkwijze</a>
     </section>
 
-</div>
+    </div>
 
     <div class="card reveal">
       <h3>Veelgestelde vragen</h3>
       <div class="faq" data-mount="diensten.faq"></div>
     </div>
 
+    <div class="section-blue reveal">
     <section class="cta-band reveal">
       <div class="cta-inner">
         <h3 data-bind="diensten.cta.title"></h3>
@@ -184,6 +187,7 @@
       </div>
       <a class="btn ghost" data-bind="diensten.cta.button_label" data-bind-href="diensten.cta.button_href" href="contact.html">Naar contact</a>
     </section>
+    </div>
   </div>
 </section>
 
